@@ -29,7 +29,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>{$_('meta.title')}</title>
+	<title>{$isLoading ? 'Homigo' : $_('meta.title')}</title>
 </svelte:head>
 
 {#if !$isLoading}
