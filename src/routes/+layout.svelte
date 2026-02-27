@@ -29,7 +29,7 @@
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
-	<title>Homigo - Trusted Professional Cleaning Services in Dubai</title>
+	<title>{$_('meta.title')}</title>
 </svelte:head>
 
 {#if !$isLoading}
@@ -102,10 +102,10 @@
 				<div>
 					<h3 class="mb-6 text-lg font-semibold">{$_('footer.services')}</h3>
 					<ul class="space-y-3 text-sm text-gray-300">
-						<li><a href="/services/deep-cleaning" class="hover:text-white transition-colors">Deep Cleaning Services</a></li>
-						<li><a href="/services/office-cleaning" class="hover:text-white transition-colors">Office Deep Cleaning</a></li>
-						<li><a href="/services/technical" class="hover:text-white transition-colors">Technical Services</a></li>
-						<li><a href="/services/sewage" class="hover:text-white transition-colors">Sewage Tank Cleaning</a></li>
+						<li><a href="/services/deep-cleaning" class="hover:text-white transition-colors">{$_('footer.links.deep_cleaning')}</a></li>
+						<li><a href="/services/office-cleaning" class="hover:text-white transition-colors">{$_('footer.links.office_cleaning')}</a></li>
+						<li><a href="/services/technical" class="hover:text-white transition-colors">{$_('footer.links.technical')}</a></li>
+						<li><a href="/services/sewage" class="hover:text-white transition-colors">{$_('footer.links.sewage')}</a></li>
 					</ul>
 				</div>
 				<div>
@@ -125,7 +125,7 @@
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
 								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 							</svg>
-							<span>Dubai, United Arab Emirates</span>
+							<span>{$_('footer.address')}</span>
 						</li>
 						<li class="flex items-center gap-3">
 							<svg class="h-5 w-5 shrink-0 text-homigo-green-light" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -143,7 +143,7 @@
 				</div>
 			</div>
 			<div class="mt-16 flex flex-col items-center justify-between gap-4 border-t border-gray-800 pt-8 text-sm text-gray-400 md:flex-row">
-				<div>© {new Date().getFullYear()} Homigo. All rights reserved.</div>
+				<div>© {new Date().getFullYear()} {$_('footer.rights')}</div>
 				<div class="flex gap-6">
 					<a href="https://twitter.com/homigo" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="Twitter">
 						<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
@@ -153,11 +153,12 @@
 					</a>
 				</div>
 			</div>
-			<!-- <div class="flex justify-center w-full mt-10">
-				<svg xmlns="http://www.w3.org/2000/svg" width="706" height="232" viewBox="0 0 706 232" fill="none">
-  <path d="M705.866 0H0V231.381H705.866V0Z" fill="black" style="fill:black;fill-opacity:1;"/>
-</svg>
-			</div> -->
+			<div class="flex justify-between items-end w-full mt-0">
+				<img src="/assets/Footer Illustration.svg" alt="Footer Illustration" />
+				<div style="display: flex; width: 184.039px; height: 26.737px; flex-direction: column; justify-content: center; color: color(display-p3 1 1 1); font-family: Satoshi; font-size: 18px; font-style: normal; font-weight: 400; line-height: 132.2%;">
+					Designed by vikncodes
+				</div>
+			</div>
 		</div>
 	</footer>
 </div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { _ } from 'svelte-i18n';
 	// Using the provided assets from the static folder
 	const cleaningTools = '/contact/hero.jpg'; // Best match for the cleaning tools background
 	const mapPlaceholder = '/images/source/Gemini_Generated_Image_dqijczdqijczdqij.png'; // Placeholder for map
@@ -26,11 +27,10 @@
 
 		<!-- Content -->
 		<div class="relative z-10 flex h-full flex-col items-center justify-center text-center text-white pt-20">
-			<p class="mb-4 text-sm font-medium tracking-wide">Home/ Contacts</p>
-			<h1 class="mb-6 text-6xl font-bold tracking-tight drop-shadow-md">Contact Us</h1>
+			<p class="mb-4 text-sm font-medium tracking-wide">{$_('contact.hero.breadcrumb')}</p>
+			<h1 class="mb-6 text-6xl font-bold tracking-tight drop-shadow-md">{$_('contact.hero.title')}</h1>
 			<p class="max-w-2xl px-4 text-lg font-medium leading-relaxed drop-shadow-sm">
-				Get your questions answered and receive a free, no-obligation quote<br />
-				for our services today
+				{@html $_('contact.hero.desc').replace('\n', '<br />')}
 			</p>
 		</div>
 	</section>
@@ -49,7 +49,7 @@
 						</svg>
 					</div>
 					<div>
-						<h3 class="mb-2 text-xl font-bold text-gray-900">Phone</h3>
+						<h3 class="mb-2 text-xl font-bold text-gray-900">{$_('contact.details.phone_title')}</h3>
 						<p class="text-gray-600">+971 5030 71989</p>
 						<p class="text-gray-600">+971 5030 71986</p>
 					</div>
@@ -63,7 +63,7 @@
 						</svg>
 					</div>
 					<div>
-						<h3 class="mb-2 text-xl font-bold text-gray-900">Email</h3>
+						<h3 class="mb-2 text-xl font-bold text-gray-900">{$_('contact.details.email_title')}</h3>
 						<p class="text-gray-600">info@homigotechnicalservices.com</p>
 					</div>
 				</div>
@@ -77,8 +77,8 @@
 						</svg>
 					</div>
 					<div>
-						<h3 class="mb-2 text-xl font-bold text-gray-900">Address</h3>
-						<p class="text-gray-600 max-w-xs">France P14 , International City , Dubai, Uae</p>
+						<h3 class="mb-2 text-xl font-bold text-gray-900">{$_('contact.details.address_title')}</h3>
+						<p class="text-gray-600 max-w-xs">{$_('contact.details.address_val')}</p>
 					</div>
 				</div>
 
@@ -90,8 +90,8 @@
 						</svg>
 					</div>
 					<div>
-						<h3 class="mb-2 text-xl font-bold text-gray-900">Working hours</h3>
-						<p class="text-gray-600">24 hrs</p>
+						<h3 class="mb-2 text-xl font-bold text-gray-900">{$_('contact.details.hours_title')}</h3>
+						<p class="text-gray-600">{$_('contact.details.hours_val')}</p>
 					</div>
 				</div>
 			</div>
