@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "services": "Services",
+    "about": "About Us",
+    "contact": "Contact",
+    "blog": "Blog",
+    "quote": "Get a Quote"
+  },
+  "footer": {
+    "description": "Bringing The Finest Cleaning And Maintenance Services To Your Doorstep. Top Rated Cleaning Company.",
+    "services": "Services",
+    "company": "Company",
+    "contact": "Contact",
+    "rights": "Homigo. All rights reserved."
+  }
+}

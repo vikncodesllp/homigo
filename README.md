@@ -1,6 +1,9 @@
-# sv
+# homigo
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Design Resources
+
+- [Figma Design File](https://www.figma.com/proto/2SxMthOnm6YhYWTgNQRWyh/Website-Design?node-id=785-31879&t=CYadqbmpkHFXoqf2-1&scaling=min-zoom&content-scaling=fixed&page-id=785%3A25121) - Main design file for the project.
+- [Design System](YOUR_DESIGN_SYSTEM_URL_HERE) - Component library and style guide.
 
 ## Creating a project
 

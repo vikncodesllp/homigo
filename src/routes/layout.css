@@ -1,3 +1,14 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
+@theme {
+	--font-sans: 'Poppins', sans-serif;
+	--color-homigo-green: #064e3b;
+	--color-homigo-green-light: #10b981;
+	--color-homigo-dark: #022c22;
+}
+
+body {
+	font-family: var(--font-sans);
+}
+
