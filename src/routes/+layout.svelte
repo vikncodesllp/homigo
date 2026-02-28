@@ -10,6 +10,7 @@
 	let { children } = $props();
 
 	let currentLang = $state('en');
+	let isMobileMenuOpen = $state(false);
 
 	onMount(() => {
 		locale.subscribe((value) => {
@@ -25,6 +26,20 @@
 		const newLang = currentLang === 'en' ? 'ar' : 'en';
 		locale.set(newLang);
 	}
+
+	function toggleMobileMenu() {
+		isMobileMenuOpen = !isMobileMenuOpen;
+		if (isMobileMenuOpen) {
+			document.body.style.overflow = 'hidden';
+		} else {
+			document.body.style.overflow = '';
+		}
+	}
+
+	function closeMobileMenu() {
+		isMobileMenuOpen = false;
+		document.body.style.overflow = '';
+	}
 </script>
 
 <svelte:head>
@@ -33,24 +48,56 @@
 </svelte:head>
 
 {#if !$isLoading}
-<div class="flex min-h-screen flex-col font-sans bg-gray-50">
+<div class="flex min-h-screen flex-col font-sans bg-gray-50 overflow-x-hidden w-full">
 	<header 
-		class="fixed top-6 z-50 left-0 right-0 mx-auto w-[calc(100%-3rem)] max-w-350 rounded-[20px] border border-[#D3D3D3] bg-white h-21.5 flex items-center px-4 transition-all"
-		style="box-shadow: 0 38px 84px 0 rgba(0, 0, 0, 0.15), 0 153px 153px 0 rgba(0, 0, 0, 0.13), 0 345px 207px 0 rgba(0, 0, 0, 0.08), 0 612px 245px 0 rgba(0, 0, 0, 0.02);"
+		class="fixed z-50 left-0 right-0 mx-auto bg-white transition-all flex items-center px-4 border-[#D3D3D3] top-0 h-16 border-b rounded-none md:top-6 md:w-[calc(100%-3rem)] md:max-w-350 md:rounded-[20px] md:border md:h-21.5"
 	>
 		<div class="w-full flex items-center justify-between">
-			<a href="/" class="flex items-center">
-				<img src={logo} alt="Homigo Logo" class="h-21.5 w-70.75 object-contain" />
-			</a>
+			<div class="flex items-center gap-4">
+				<!-- Mobile Hamburger -->
+				<button class="md:hidden p-2 -ml-2 text-gray-800" onclick={toggleMobileMenu} aria-label="Menu">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+				</button>
 
-			<div class="flex items-center gap-5 ml-37.5">
+				<a href="/" class="flex items-center">
+					<img src={logo} alt="Homigo Logo" class="h-10 w-auto md:h-21.5 md:w-70.75 object-contain" />
+				</a>
+			</div>
+
+			<!-- Desktop Nav -->
+			<div class="hidden md:flex items-center gap-5 ml-auto">
 				<a href="/#services" class="p-2.5 text-center text-black font-medium text-xl leading-6 font-['SF_Pro']">{$_('nav.services')}</a>
 				<a href="/about" class="p-2.5 text-center text-black font-medium text-xl leading-6 font-['SF_Pro']">{$_('nav.about')}</a>
 				<a href="/contact" class="p-2.5 text-center text-black font-medium text-xl leading-6 font-['SF_Pro']">{$_('nav.contact')}</a>
 				<a href="/blog" class="p-2.5 text-center text-black font-medium text-xl leading-6 font-['SF_Pro']">{$_('nav.blog')}</a>
 			</div>
 
-			<div class="flex items-center ml-auto">
+			<!-- Mobile Right Icons -->
+			<div class="flex md:hidden items-center gap-2 pr-2">
+				<button onclick={toggleLanguage} class="flex items-center gap-1 text-sm font-bold text-gray-800">
+					{currentLang.toUpperCase()}
+					<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+					</svg>
+				</button>
+				<div class="flex items-center gap-2">
+					<a href="tel:+971551234567" class="p-2 rounded-full border border-homigo-green text-homigo-green" aria-label="Call">
+						<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+						</svg>
+					</a>
+					<a href="https://wa.me/971551234567" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full border border-[#25D366] text-[#25D366]" aria-label="WhatsApp">
+						<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+							<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+
+			<!-- Desktop Right -->
+			<div class="hidden md:flex items-center ml-auto">
 				<button onclick={toggleLanguage} class="relative flex items-center gap-1.5 mr-8 cursor-pointer focus:outline-none" aria-label="Toggle Language">
 					<img src={currentLang === 'en' ? '/images/EN.svg' : '/images/AR.svg'} alt={currentLang} class="w-5.25 h-3.25" />
 					<div class="relative w-6 h-6">
@@ -59,6 +106,17 @@
 						</svg>
 					</div>
 				</button>
+
+				<!-- <a href="tel:+971551234567" class="p-2 rounded-full border border-[#064e3b] text-[#064e3b] mr-4 hover:bg-gray-50 transition-colors" aria-label="Call">
+					<svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+					</svg>
+				</a>
+				<a href="https://wa.me/971551234567" target="_blank" rel="noopener noreferrer" class="p-2 rounded-full border border-[#25D366] text-[#25D366] mr-6 hover:bg-gray-50 transition-colors" aria-label="WhatsApp">
+					<svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+						<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+					</svg>
+				</a> -->
 
 				<div class="flex items-center justify-center p-2.5">
 					<a
@@ -72,8 +130,62 @@
 		</div>
 	</header>
 
-	<!-- WhatsApp Floating Icons -->
-	<div class="fixed bottom-8 right-8 z-50 flex gap-4">
+	<!-- Mobile Menu Overlay -->
+	{#if isMobileMenuOpen}
+		<div class="fixed inset-0 z-60 bg-white flex flex-col md:hidden">
+			<!-- Header in Overlay -->
+			<div class="flex items-center px-4 h-16 border-b border-gray-100 shrink-0">
+				<button class="p-2 -ml-2 mr-2 text-gray-800" onclick={closeMobileMenu} aria-label="Close Menu">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+					</svg>
+				</button>
+				
+				<img src={logo} alt="Homigo Logo" class="h-8 w-auto object-contain" />
+				
+				<div class="ml-auto flex items-center gap-2">
+					<button onclick={toggleLanguage} class="flex items-center gap-1 text-sm font-bold text-gray-800">
+						{currentLang.toUpperCase()}
+						<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+						</svg>
+					</button>
+					<a href="tel:+971551234567" class="p-1.5 rounded-full border border-homigo-green text-homigo-green">
+						<svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+						</svg>
+					</a>
+					<a href="https://wa.me/971551234567" target="_blank" rel="noopener noreferrer" class="p-1.5 rounded-full border border-[#25D366] text-[#25D366]">
+						<svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+							<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.017-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+			
+			<!-- Mobile Menu Items -->
+			<div class="flex flex-col p-6 text-xl font-medium overflow-y-auto grow">
+				<a href="/#services" class="py-4 text-black border-b border-gray-100" onclick={closeMobileMenu}>{$_('nav.services')}</a>
+				<a href="/about" class="py-4 text-black border-b border-gray-100" onclick={closeMobileMenu}>{$_('nav.about')}</a>
+				<a href="/contact" class="py-4 text-black border-b border-gray-100" onclick={closeMobileMenu}>{$_('nav.contact')}</a>
+				<a href="/blog" class="py-4 text-black" onclick={closeMobileMenu}>{$_('nav.blog')}</a>
+			</div>
+
+			<!-- Mobile Menu Bottom -->
+			<div class="p-6 border-t border-gray-100 mt-auto">
+				<a
+					href="/quote"
+					onclick={closeMobileMenu}
+					class="flex items-center justify-center w-full rounded-md bg-[#15562E] px-4 py-4 text-white font-medium text-lg"
+				>
+					{$_('nav.quote')}
+				</a>
+			</div>
+		</div>
+	{/if}
+
+	<!-- WhatsApp Floating Icons (Hidden on mobile as they are in header) -->
+	<div class="hidden md:flex fixed bottom-8 right-8 z-50 gap-4">
 		<a href="tel:+971551234567" class="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg transition-transform hover:scale-110" aria-label="Call Homigo">
 			<svg class="h-8 w-8 text-[#15562E]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -86,7 +198,7 @@
 		</a>
 	</div>
 
-	<main class="grow">
+	<main class="grow w-full pt-16 md:pt-0">
 		{@render children()}
 	</main>
 

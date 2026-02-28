@@ -87,16 +87,16 @@
 	</section>
 
 	<!-- Intro Section -->
-	<section class="py-16 md:py-24">
+	<section class="py-16 md:py-24 overflow-hidden">
 		<div class="container mx-auto px-4 flex flex-col md:flex-row gap-12 items-start relative">
 			<div class="md:w-1/2 pt-12">
-				<h2 class="text-3xl font-bold text-gray-900 mb-6" style="display: flex; flex-direction: column; justify-content: center; flex-shrink: 0; align-self: stretch; color: color(display-p3 0.0481 0.0481 0.0481); font-family: 'PF Bague Sans Pro'; font-size: 60px; font-style: normal; font-weight: 900; line-height: normal;">
+				<h2 class="text-3xl md:text-[60px] font-bold text-gray-900 mb-6 font-['PF_Bague_Sans_Pro'] leading-tight md:leading-normal" style="color: color(display-p3 0.0481 0.0481 0.0481);">
 					<!-- Using a generic key for "Top Rated Technical & Cleaning Services" but splitting it might be tricky with BR. Let's use the full string or split keys. The JSON has 'title'. -->
 					{@html $_('home.intro.title').replace('&', '&<br/>')}
 				</h2>
 				<!-- Note: The BR was hardcoded. The JSON string doesn't have BR. I can use {@html} or just CSS. For now let's assume the JSON title is single line or handles it. The design had a BR. I will rely on CSS width or just let it wrap. Or I can inject BR. -->
 				
-				<p class="text-gray-600 mb-6 leading-relaxed" style="display: flex; flex-direction: column; justify-content: center; flex-shrink: 0; align-self: stretch; color: color(display-p3 0 0 0); font-family: 'PF Bague Sans Pro'; font-size: 32px; font-style: normal; font-weight: 400; line-height: 160%;">
+				<p class="text-lg md:text-[32px] text-gray-600 mb-6 leading-relaxed font-['PF_Bague_Sans_Pro']" style="color: color(display-p3 0 0 0);">
 					{$_('home.intro.description')}
 				</p>
 			</div>
@@ -252,7 +252,7 @@
 							<div class="absolute -inset-4 bg-blue-100 rounded-2xl -z-10 -rotate-3"></div>
 							<img src="/assets/Landing page/ggvdvdvd_compressed.jpeg" alt="Flexible Scheduling" class="rounded-xl shadow-lg w-full max-w-md h-64 object-cover" />
 							<!-- Clock Overlay Badge -->
-							<div class="absolute -bottom-40 -right-26">
+							<div class="absolute -bottom-40 -right-26 hidden md:block">
 								<svg xmlns="http://www.w3.org/2000/svg" width="208.313" height="241.212" viewBox="0 0 315 492" fill="none" style="filter: drop-shadow(0 8px 17px color(display-p3 0.502 0.502 0.502 / 0.49)) drop-shadow(0 30px 30px color(display-p3 0.502 0.502 0.502 / 0.43)) drop-shadow(0 68px 41px color(display-p3 0.502 0.502 0.502 / 0.25)) drop-shadow(0 120px 48px color(display-p3 0.502 0.502 0.502 / 0.07)) drop-shadow(0 188px 53px color(display-p3 0.502 0.502 0.502 / 0.01));">
 									<g filter="url(#filter0_ddddd_1_1799)">
 										<circle cx="159.6" cy="143.185" r="101.713" fill="black" style="fill:black;fill-opacity:1;"/>

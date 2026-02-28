@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { _ } from 'svelte-i18n';
 	// Assets
-	const heroBg = '/assets/About Us/about_hero.png'; // Using painting/roller image for hero
+	const heroBg = '/assets/About Us/Frame hero.jpeg'; // Using painting/roller image for hero
 	const aboutImage1 = '/assets/About Us/section2_image1.jpeg'; // Building exterior cleaning
 	const aboutImage2 = '/assets/About Us/section2_image2.jpeg'; // High rise cleaning
 	const aboutImage3 = '/assets/About Us/Frame 01.png'; // Office cleaning
@@ -14,9 +14,11 @@
 <div class="bg-gray-50 pb-20 font-['SF_Pro']">
 	<!-- Hero Section -->
 	<section class="relative flex min-h-150 w-full items-center overflow-hidden bg-[#A6D5E4]">
-		<!-- Middle Band Background -->
-		<div class="absolute top-1/2 h-87.5 w-full -translate-y-1/2 bg-[#91C7D9]/50"></div>
-
+		<img
+			src={heroBg}
+			alt="Blog Hero Background"
+			class="absolute inset-0 h-full w-full object-cover"
+		/>
 		<!-- Content Container -->
 		<div
 			class="relative z-10 container mx-auto flex h-full flex-col items-center justify-between px-4 md:flex-row"
@@ -29,29 +31,6 @@
 					{$_('about.hero.desc')}
 				</p>
 			</div>
-		</div>
-
-		<!-- Right Image (Absolute Positioned) -->
-		<div class="absolute top-0 right-0 h-full w-1/2 flex justify-end items-center z-0">
-			<img
-				src={heroBg}
-				alt="Cleaning Roller"
-				class="h-[90%] w-auto object-contain object-right drop-shadow-2xl translate-x-12"
-			/>
-		</div>
-
-		<!-- Floating Icons (Bottom Right) -->
-		<div class="absolute right-8 bottom-8 z-20 flex gap-4">
-			<img
-				src={herosvg1}
-				alt="Phone"
-				class="h-12 w-12 cursor-pointer transition-transform hover:scale-110"
-			/>
-			<img
-				src={herosvg2}
-				alt="WhatsApp"
-				class="h-12 w-12 cursor-pointer transition-transform hover:scale-110"
-			/>
 		</div>
 	</section>
 
@@ -117,7 +96,8 @@
 			class="container mx-auto flex flex-col items-center justify-between gap-8 px-4 md:flex-row"
 		>
 			<h2 class="max-w-xl text-3xl leading-tight font-bold text-black">
-				{$_('about.cta.title_part1')} <span class="relative inline-block">
+				{$_('about.cta.title_part1')}
+				<span class="relative inline-block">
 					{$_('about.cta.title_trusted')}
 					<svg
 						class="absolute -bottom-2 left-0 h-3 w-full text-red-500"
