@@ -1,305 +1,305 @@
 {
-  "meta": {
-    "title": "Homigo - Trusted Professional Cleaning Services in Dubai"
-  },
-  "nav": {
-    "home": "Home",
-    "services": "Services",
-    "about": "About Us",
-    "contact": "Contact",
-    "blog": "Blog",
-    "quote": "Get a Quote"
-  },
-  "footer": {
-    "description": "Bringing The Finest Cleaning And Maintenance Services To Your Doorstep. Top Rated Cleaning Company.",
-    "services": "Services",
-    "company": "Company",
-    "contact": "Contact",
-    "rights": "Homigo. All rights reserved.",
-    "links": {
-      "deep_cleaning": "Deep Cleaning Services",
-      "office_cleaning": "Office Deep Cleaning",
-      "technical": "Technical Services",
-      "sewage": "Sewage Tank Cleaning"
+	"meta": {
+		"title": "Homigo - Trusted Professional Cleaning Services in Dubai"
+	},
+	"nav": {
+		"home": "Home",
+		"services": "Services",
+		"about": "About Us",
+		"contact": "Contact",
+		"blog": "Blog",
+		"quote": "Get a Quote"
+	},
+	"footer": {
+		"description": "Bringing The Finest Cleaning And Maintenance Services To Your Doorstep. Top Rated Cleaning Company.",
+		"services": "Services",
+		"company": "Company",
+		"contact": "Contact",
+		"rights": "Homigo. All rights reserved.",
+		"links": {
+			"deep_cleaning": "Deep Cleaning Services",
+			"office_cleaning": "Office Deep Cleaning",
+			"technical": "Technical Services",
+			"sewage": "Sewage Tank Cleaning"
+		},
+		"address": "Dubai, United Arab Emirates"
+	},
+	"home": {
+		"hero": {
+			"title_1": "Trusted Professional",
+			"title_2": "Cleaning Services in Dubai",
+			"subtitle": "Bring Back the Fresh Look of Your Business or Home with Homigo Cleaning Company",
+			"cta": "Get a Free Quote"
+		},
+		"intro": {
+			"title": "Top Rated Technical & Cleaning Services",
+			"description": "Since 2003, we deliver professional cleaning and technical services in Dubai. Our trusted team specializes in deep cleaning, water tank cleaning, drainage cleaning, and maintenance for villas, apartments, and offices. Affordable pricing, fast service, and guaranteed satisfaction across Dubai."
+		},
+		"quote_form": {
+			"title": "Get a Fast Quote",
+			"subtitle": "We receive your request instantly via SMS and usually respond within minutes!",
+			"name": "Name",
+			"phone": "Phone",
+			"email": "Email",
+			"address": "Address",
+			"service_label": "Choose a Service",
+			"service_options": {
+				"window": "Window Cleaning",
+				"deep": "Deep Cleaning",
+				"maintenance": "Maintenance"
+			},
+			"submit": "Get a Fast Quote"
+		},
+		"services_section": {
+			"title": "We're Glad You're Here!",
+			"subtitle": "Many cleaning needs, one solution.",
+			"view_menu": "View Menu"
+		},
+		"process": {
+			"subtitle": "Just Three Easy Steps",
+			"title": "We Keep Things Simple",
+			"step1": {
+				"title": "Request a Quick Quote",
+				"desc": "Fill out our short online form to receive a fast, free quote. It's simple, hassle-free, and your request reaches us instantly—expect a quick response via SMS or call."
+			},
+			"step2": {
+				"title": "Choose a Convenient Schedule",
+				"desc": "We tailor every project to your needs. Pick a time that works best for you, and if needed, we're happy to arrange a site visit or consultation to answer all your questions."
+			},
+			"step3": {
+				"title": "Relax, We Handle the Rest",
+				"desc": "On the scheduled day, our team takes care of everything while keeping you informed. Once completed, we conduct a final walkthrough to ensure your complete satisfaction."
+			},
+			"cta": "Get a Quote"
+		},
+		"features": {
+			"title": "What Makes Homigo Different",
+			"quality": {
+				"title": "Quality Cleaning",
+				"desc": "Our Dubai deep cleaning service follows strict quality standards, using eco-friendly products and expert techniques to deliver safe, detailed, and reliable cleaning for residential and commercial spaces. We provide professional deep cleaning in Dubai with experienced staff, modern tools, and quality checks to ensure every corner is thoroughly cleaned and sanitized."
+			},
+			"flexible": {
+				"title": "Flexible Scheduling",
+				"desc": "Our flexible scheduling lets you book professional cleaning services at times that suit you best, ensuring seamless service delivery without interrupting your home or workday."
+			},
+			"technology": {
+				"title": "Technology Backed",
+				"desc": "Our cleaning services are fully technology-backed, combining advanced equipment, smart systems, and modern processes to deliver consistent, high-quality results. From digital scheduling and real-time service tracking to professional-grade machinery and eco-friendly technology, we ensure efficient, reliable, and hygienic cleaning every time."
+			},
+			"insured": {
+				"title": "Insured Professionals",
+				"desc": "Our insured professionals deliver reliable, safe, and worry-free cleaning services giving you complete peace of mind while maintaining high standards of quality and professionalism."
+			},
+			"cta": "Get a Free Quote"
+		},
+		"testimonials": {
+      "title": "Why Our Clients <span class=\"relative inline-block\">Trust<svg class=\"absolute -bottom-3 left-0 w-full h-3 text-[#C91C1C]\" viewBox=\"0 0 100 10\" preserveAspectRatio=\"none\"><path d=\"M0 0 Q 50 10 100 0\" stroke=\"currentColor\" stroke-width=\"3\" fill=\"none\" /></svg></span> Homigo"
     },
-    "address": "Dubai, United Arab Emirates"
-  },
-  "home": {
-    "hero": {
-      "title_1": "Trusted Professional",
-      "title_2": "Cleaning Services in Dubai",
-      "subtitle": "Bring Back the Fresh Look of Your Business or Home with Homigo Cleaning Company",
-      "cta": "Get a Free Quote"
-    },
-    "intro": {
-      "title": "Top Rated Technical & Cleaning Services",
-      "description": "Since 2003, we deliver professional cleaning and technical services in Dubai. Our trusted team specializes in deep cleaning, water tank cleaning, drainage cleaning, and maintenance for villas, apartments, and offices. Affordable pricing, fast service, and guaranteed satisfaction across Dubai."
-    },
-    "quote_form": {
-      "title": "Get a Fast Quote",
-      "subtitle": "We receive your request instantly via SMS and usually respond within minutes!",
-      "name": "Name",
-      "phone": "Phone",
-      "email": "Email",
-      "address": "Address",
-      "service_label": "Choose a Service",
-      "service_options": {
-        "window": "Window Cleaning",
-        "deep": "Deep Cleaning",
-        "maintenance": "Maintenance"
-      },
-      "submit": "Get a Fast Quote"
-    },
-    "services_section": {
-        "title": "We're Glad You're Here!",
-        "subtitle": "Many cleaning needs, one solution.",
-        "view_menu": "View Menu"
-    },
-    "process": {
-      "subtitle": "Just Three Easy Steps",
-      "title": "We Keep Things Simple",
-      "step1": {
-        "title": "Request a Quick Quote",
-        "desc": "Fill out a simple form for home or commercial cleaning. It's simple, fast & free. Get an instant quote tailored to your cleaning needs."
-      },
-      "step2": {
-        "title": "Choose a Convenient Schedule",
-        "desc": "Pick a date and time that works for you. Our team works around your schedule to minimize disruption."
-      },
-      "step3": {
-        "title": "Relax, We Handle the Rest",
-        "desc": "Sit back while our expert team makes your space sparkle. We arrive fully equipped and get the job done right."
-      },
-      "cta": "Get a Quote"
-    },
-    "features": {
-      "title": "What Makes Homigo Different",
-      "quality": {
-        "title": "Quality Cleaning",
-        "desc": "Our Asian deep cleaning method ensures every nook and cranny is spotless. Using eco-friendly products and expert techniques to deliver safe, detailed, and reliable cleaning for homes and commercial spaces. Our team of professionals treat every client's home with respect and care. Modern tools and quality checks guarantee every service is done right, leaving you worry-free."
-      },
-      "flexible": {
-        "title": "Flexible Scheduling",
-        "desc": "We offer flexible scheduling including weekends and holidays. Our professional booking stream keeps your schedule free, ensuring seamless service delivery without interrupting your home or workday."
-      },
-      "technology": {
-        "title": "Technology Backed",
-        "desc": "Our cleaning services are fully technology-backed, combining advanced equipment and smart solutions to improve efficiency and precision. High-quality results every time using industrial-grade machinery and eco-friendly technology, we ensure efficient, safe, and hygienic cleaning everywhere."
-      },
-      "insured": {
-        "title": "Insured Professionals",
-        "desc": "Our insured professionals deliver reliable, safe, and worry-free cleaning services giving you complete peace of mind while maintaining high standards of quality and professionalism."
-      },
-      "cta": "Get a Free Quote"
-    },
-    "testimonials": {
-      "title": "Why Our Clients Trust Homigo"
-    },
-    "testimonials_items": {
-      "item1": {
-        "name": "Allen",
-        "text": "Excellent service. Booking with Homigo was smooth and efficient. The crew arrived on time and did a fantastic job. Highly recommended!",
-        "date": "2 months ago"
-      },
-      "item2": {
-        "name": "Sarah Mohammed",
-        "text": "Very professional team. They did a deep clean of my villa and the results were amazing. Every corner was spotless.",
-        "date": "1 month ago"
-      },
-      "item3": {
-        "name": "Zara",
-        "text": "Best cleaning service in Dubai. Reliable, affordable, and trustworthy staff. Will definitely use them again.",
-        "date": "1 week ago"
-      }
-    },
-    "faq": {
-      "title": "Have Questions? Ask Away.",
-      "desc": "Here are some common questions from our customers. Need more help? Contact our customer service team via phone for fast response.",
-      "cta": "Get a Free Quote"
-    },
-    "faq_items": {
-      "q1": {
-        "question": "How can I book a cleaning or technical service in Dubai?",
-        "answer": "You can easily book through our website form, call us directly, or send us a WhatsApp message. We offer flexible scheduling to suit your needs."
-      },
-      "q2": {
-        "question": "Do I need to provide deep cleaning tools and supplies?",
-        "answer": "No, our professional team comes fully equipped with all necessary tools and eco-friendly cleaning supplies."
-      },
-      "q3": {
-        "question": "Can I trust professional cleaners in my home or office?",
-        "answer": "Absolutely. All our staff are background-checked, trained, and insured professionals."
-      },
-      "q4": {
-        "question": "Do your cleaners know how to use tools in Dubai?",
-        "answer": "Yes, our team is trained in handling all modern cleaning equipment and techniques specifically for Dubai homes and offices."
-      },
-      "q5": {
-        "question": "What if I’m not satisfied with the cleaning service?",
-        "answer": "Your satisfaction is our priority. If you are not happy with any aspect of the service, please let us know within 24 hours and we will address it immediately."
-      }
-    },
-    "services_list": {
-        "waste_water": "Waste Water Removal",
-        "office_deep": "Office Deep Cleaning",
-        "technical": "Technical Services",
-        "sewage_tank": "Sewage Tank Cleaning",
-        "grease_trap": "Grease Trap Cleaning Services",
-        "sewage_water": "Sewage Water Removal",
-        "deep_cleaning": "Deep Cleaning Services in Dubai",
-        "drainage": "Drainage Cleaning Services",
-        "painting": "Painting Services"
-    }
-  },
-  "about": {
-    "hero": {
-      "breadcrumb": "Home/ About Us",
-      "title": "About Us",
-      "desc": "Learn more about our business and our commitment to quality, reliability, and customer satisfaction."
-    },
-    "hello": {
-      "title": "Hello!",
-      "desc": "Homigo Cleaning and Technical Services provides professional deep cleaning and technical services in Dubai and across the UAE. Our trained and insured team uses advanced equipment and eco-friendly products to deliver safe, reliable results for homes and businesses, with flexible scheduling and a strong focus on customer satisfaction."
-    },
-    "mission": {
-      "title": "Mission",
-      "desc": "Deliver reliable, eco-friendly cleaning and technical services ensuring hygienic spaces, quality workmanship, and complete customer satisfaction."
-    },
-    "vision": {
-      "title": "Vision",
-      "desc": "To become the most trusted cleaning and technical services brand in Dubai, setting standards for quality and reliability."
-    },
-    "cta": {
-      "title_part1": "Experience the Benefits of a",
-      "title_trusted": "Trusted",
-      "title_part2": "Cleaning & Technical Services",
-      "button": "Get a fast Quote"
-    }
-  },
-  "contact": {
-    "hero": {
-      "breadcrumb": "Home/ Contacts",
-      "title": "Contact Us",
-      "desc": "Get your questions answered and receive a free, no-obligation quote\nfor our services today"
-    },
-    "details": {
-      "phone_title": "Phone",
-      "email_title": "Email",
-      "address_title": "Address",
-      "address_val": "France P14 , International City , Dubai, Uae",
-      "hours_title": "Working hours",
-      "hours_val": "24 hrs"
-    }
-  },
-  "quote_page": {
-    "title": "We're Happy to Help!",
-    "subtitle": "Book trusted cleaning experts today.",
-    "form": {
-      "name": "Name",
-      "service_label": "Choose a Service",
-      "service_options": {
-        "office": "Office Deep Cleaning",
-        "home": "Home Deep Cleaning",
-        "sewage": "Sewage Tank Cleaning",
-        "ac": "AC Filter Cleaning",
-        "painting": "Painting Services"
-      },
-      "phone": "Phone",
-      "email": "Email",
-      "message_label": "Have Any Message?",
-      "message_placeholder": "Your Message",
-      "submit": "Send Request"
-    }
-  },
-  "blog_page": {
-    "hero": {
-      "breadcrumb": "Home/ Blog",
-      "title": "Blog",
-      "desc": "Practical cleaning advice and professional solutions for homes and businesses"
-    },
-    "featured": {
-      "title": "Featured Article",
-      "article": {
-        "title": "Sewage Water Cleaning in Dubai: Importance and Benefits",
-        "excerpt": "Sewage water cleaning in Dubai is essential for maintaining hygiene, protecting public health, and ensuring proper wastewater management. With rapid urban development and high population density, residential and commercial properties generate large amounts of wastewater daily.",
-        "read_btn": "Read"
-      }
-    },
-    "latest": {
-      "title": "Latest Articles",
-      "articles": {
-        "painting": {
-          "title": "Professional Painting Services for Homes & Businesses in Dubai",
-          "excerpt": "Heat and humidity in Dubai can damage paint over time."
-        },
-        "ac": {
-          "title": "AC Filter Cleaning in Dubai & GCC",
-          "excerpt": "Regular AC filter cleaning ensures cleaner air and better efficiency in Dubai."
-        },
-        "ramadan": {
-          "title": "Ramadan Cleaning Services in Dubai",
-          "excerpt": "Professional Ramadan cleaning in Dubai creates a clean and peaceful space for the holy month."
-        }
-      },
-      "read_btn": "Read"
-    }
-  },
-  "blog_posts": {
-    "ac_filter": {
-      "breadcrumb": "Home / Blog / AC Clean Filters",
-      "title": "AC Clean Filters: Why Regular AC Filter Cleaning Is Critical in Dubai and GCC",
-      "intro": "Air conditioning systems operate almost year-round in Dubai and across the GCC. While AC units provide comfort, dirty filters can compromise air quality and system efficiency. Regular AC filter cleaning in Dubai is essential for maintaining healthy indoor air and reducing energy consumption.",
-      "role_title": "Role of AC Filters in Indoor Air Quality",
-      "role_text": "AC filters trap dust, pollen, bacteria, and airborne pollutants. Over time, these contaminants clog the filters, restricting airflow and forcing the system to work harder. This not only increases electricity bills but also circulates polluted air indoors.",
-      "climate_title": "Importance of AC Filter Cleaning in UAE Climate",
-      "climate_text": "Due to extreme heat and frequent dust exposure, AC systems in the UAE accumulate dirt faster than in other regions. Without regular cleaning, AC filters can become breeding grounds for mold and bacteria, leading to allergies, asthma, and respiratory discomfort.",
-      "signs_title": "Common Signs Your AC Filters Need Cleaning",
-      "signs_text": "Weak cooling performance, unpleasant odors, frequent system breakdowns, and higher energy bills indicate dirty AC filters. Ignoring these signs can reduce the lifespan of the AC unit.",
-      "diy_title": "Professional AC Filter Cleaning vs DIY",
-      "diy_text": "While basic cleaning can be done at home, professional AC cleaning services in Dubai ensure deep cleaning, disinfection, and system inspection. Professionals use specialized tools to safely clean filters, ducts, and coils.",
-      "frequency_title": "Recommended Cleaning Frequency",
-      "frequency_text": "Residential AC filters should be cleaned every one to two months, while commercial HVAC systems require more frequent maintenance due to continuous usage."
-    },
-    "painting": {
-      "breadcrumb": "Home / Blog / Professional Painting Services",
-      "title": "Professional Painting Services: Enhancing Residential and Commercial Properties in Dubai",
-      "intro": "Professional painting services are essential for maintaining the appearance and durability of properties in Dubai. The harsh climate, humidity, and heat can cause paint to fade, crack, or peel over time. Expert painting services ensure long-lasting and visually appealing results.",
-      "importance_title": "Importance of Professional Painting",
-      "importance_text": "Painting is not just decorative; it protects walls from moisture, heat, and wear. Professional painters prepare surfaces properly, choose suitable paints, and apply them with precision.",
-      "residential_title": "Residential Painting Services in Dubai",
-      "residential_text": "Interior and exterior painting services for villas and apartments help homeowners maintain modern, elegant spaces. Professional painters ensure minimal disruption and clean finishes.",
-      "commercial_title": "Commercial Painting Solutions",
-      "commercial_text": "Commercial painting services in Dubai cater to offices, warehouses, malls, and retail outlets. These services are planned to minimize downtime while delivering durable results.",
-      "process_title": "Professional Painting Process",
-      "process_text": "The process includes surface inspection, crack filling, sanding, priming, paint application, and final inspection. High-quality paints suitable for UAE weather conditions are used.",
-      "benefits_title": "Benefits of Hiring Professional Painters",
-      "benefits_text": "Professional painting services save time, reduce material waste, and provide superior finishes that last longer in Dubai's climate."
-    },
-    "ramadan": {
-      "breadcrumb": "Home / Blog / Ramadan Cleaning Services in Dubai",
-      "title": "Ramadan Cleaning Services: Preparing Homes and Businesses in Dubai",
-      "intro": "Ramadan is a special time of spiritual reflection, family gatherings, and hospitality. Professional Ramadan cleaning services in Dubai help create clean and peaceful environments for the holy month.",
-      "importance_title": "Importance of Pre-Ramadan Cleaning",
-      "importance_text": "A clean space promotes calmness and comfort during fasting and prayers. Pre-Ramadan cleaning ensures hygiene and readiness for guests.",
-      "deep_title": "Ramadan Deep Cleaning Services",
-      "deep_text": "These services focus on kitchens, dining areas, living rooms, prayer spaces, and bathrooms, ensuring thorough cleanliness.",
-      "commercial_title": "Commercial Ramadan Cleaning Solutions",
-      "commercial_text": "Mosques, offices, and retail spaces benefit from specialized cleaning services to handle increased visitors during Ramadan.",
-      "benefits_title": "Benefits of Professional Ramadan Cleaning",
-      "benefits_text": "Hiring professionals saves time, reduces stress, and ensures high hygiene standards throughout the month."
-    },
-    "sewage": {
-      "breadcrumb": "Home / Blog / Sewage Water Cleaning in Dubai",
-      "title": "Sewage Water Cleaning in Dubai:<br/>Importance and Benefits",
-      "intro": "Sewage water cleaning in Dubai is essential for maintaining hygiene, protecting public health, and ensuring proper wastewater management. With rapid urban development and high population density, residential and commercial properties generate large amounts of wastewater daily. Regular sewage cleaning helps prevent system failures, unpleasant odors, and environmental pollution.",
-      "what_title": "What is Sewage Water Cleaning?",
-      "what_text": "Sewage water cleaning involves removing sludge, grease, solid waste, and harmful contaminants from sewage tanks, pipelines, and septic systems. Professional sewage cleaning services in Dubai use advanced equipment such as vacuum tankers and high-pressure jetting machines. These tools help remove blockages and ensure smooth wastewater flow while maintaining safety and efficiency.",
-      "benefits_title": "Benefits of Regular Sewage Cleaning",
-      "benefits_text": "Routine sewage cleaning offers several important benefits. It prevents blockages that can lead to sewage overflow and property damage. It also eliminates foul odors caused by waste buildup and reduces the risk of harmful bacteria and infections. Regular maintenance extends the lifespan of plumbing systems and helps avoid costly emergency repairs.",
-      "when_title": "When Do You Need Sewage Cleaning?",
-      "when_text": "Common signs that indicate the need for sewage cleaning include slow drainage, bad smells, sewage backups, and unusual sounds from pipes. Residential properties typically require cleaning every 6 to 12 months, while commercial facilities may need more frequent servicing depending on usage.",
-      "conclusion_title": "Conclusion",
-      "conclusion_text": "Hiring professional sewage cleaning services in Dubai ensures safe waste removal, proper disposal, and compliance with local regulations. Regular sewage maintenance protects your property, improves system efficiency, and supports a clean and healthy environment."
-    }
-  }
+		"testimonials_items": {
+			"item1": {
+				"name": "Allen",
+				"text": "Excellent service. Booking with Homigo was smooth and efficient. The crew arrived on time and did a fantastic job. Highly recommended!",
+				"date": "2 months ago"
+			},
+			"item2": {
+				"name": "Sarah Mohammed",
+				"text": "Very professional team. They did a deep clean of my villa and the results were amazing. Every corner was spotless.",
+				"date": "1 month ago"
+			},
+			"item3": {
+				"name": "Zara",
+				"text": "Best cleaning service in Dubai. Reliable, affordable, and trustworthy staff. Will definitely use them again.",
+				"date": "1 week ago"
+			}
+		},
+		"faq": {
+			"title": "Have Questions? Ask Away.",
+			"desc": "Here are some common questions from our customers. Need more help? Contact our customer service team via phone for fast response.",
+			"cta": "Get a Free Quote"
+		},
+		"faq_items": {
+			"q1": {
+				"question": "How can I book a cleaning or technical service in Dubai?",
+				"answer": "You can easily book through our website form, call us directly, or send us a WhatsApp message. We offer flexible scheduling to suit your needs."
+			},
+			"q2": {
+				"question": "Do I need to provide deep cleaning tools and supplies?",
+				"answer": "No, our professional team comes fully equipped with all necessary tools and eco-friendly cleaning supplies."
+			},
+			"q3": {
+				"question": "Can I trust professional cleaners in my home or office?",
+				"answer": "Absolutely. All our staff are background-checked, trained, and insured professionals."
+			},
+			"q4": {
+				"question": "Do your cleaners know how to use tools in Dubai?",
+				"answer": "Yes, our team is trained in handling all modern cleaning equipment and techniques specifically for Dubai homes and offices."
+			},
+			"q5": {
+				"question": "What if I’m not satisfied with the cleaning service?",
+				"answer": "Your satisfaction is our priority. If you are not happy with any aspect of the service, please let us know within 24 hours and we will address it immediately."
+			}
+		},
+		"services_list": {
+			"waste_water": "Waste Water Removal",
+			"office_deep": "Office Deep Cleaning",
+			"technical": "Technical Services",
+			"sewage_tank": "Sewage Tank Cleaning",
+			"grease_trap": "Grease Trap Cleaning Services",
+			"sewage_water": "Sewage Water Removal",
+			"deep_cleaning": "Deep Cleaning Services in Dubai",
+			"drainage": "Drainage Cleaning Services",
+			"painting": "Painting Services"
+		}
+	},
+	"about": {
+		"hero": {
+			"breadcrumb": "Home/ About Us",
+			"title": "About Us",
+			"desc": "Learn more about our business and our commitment to quality, reliability, and customer satisfaction."
+		},
+		"hello": {
+			"title": "Hello!",
+			"desc": "Homigo Cleaning and Technical Services provides professional deep cleaning and technical services in Dubai and across the UAE. Our trained and insured team uses advanced equipment and eco-friendly products to deliver safe, reliable results for homes and businesses, with flexible scheduling and a strong focus on customer satisfaction."
+		},
+		"mission": {
+			"title": "Mission",
+			"desc": "Deliver reliable, eco-friendly cleaning and technical services ensuring hygienic spaces, quality workmanship, and complete customer satisfaction."
+		},
+		"vision": {
+			"title": "Vision",
+			"desc": "To become the most trusted cleaning and technical services brand in Dubai, setting standards for quality and reliability."
+		},
+		"cta": {
+			"title_part1": "Experience the Benefits of a",
+			"title_trusted": "Trusted",
+			"title_part2": "Cleaning & Technical Services",
+			"button": "Get a fast Quote"
+		}
+	},
+	"contact": {
+		"hero": {
+			"breadcrumb": "Home/ Contacts",
+			"title": "Contact Us",
+			"desc": "Get your questions answered and receive a free, no-obligation quote\nfor our services today"
+		},
+		"details": {
+			"phone_title": "Phone",
+			"email_title": "Email",
+			"address_title": "Address",
+			"address_val": "France P14 , International City , Dubai, Uae",
+			"hours_title": "Working hours",
+			"hours_val": "24 hrs"
+		}
+	},
+	"quote_page": {
+		"title": "We're Happy to Help!",
+		"subtitle": "Book trusted cleaning experts today.",
+		"form": {
+			"name": "Name",
+			"service_label": "Choose a Service",
+			"service_options": {
+				"office": "Office Deep Cleaning",
+				"home": "Home Deep Cleaning",
+				"sewage": "Sewage Tank Cleaning",
+				"ac": "AC Filter Cleaning",
+				"painting": "Painting Services"
+			},
+			"phone": "Phone",
+			"email": "Email",
+			"message_label": "Have Any Message?",
+			"message_placeholder": "Your Message",
+			"submit": "Send Request"
+		}
+	},
+	"blog_page": {
+		"hero": {
+			"breadcrumb": "Home/ Blog",
+			"title": "Blog",
+			"desc": "Practical cleaning advice and professional solutions for homes and businesses"
+		},
+		"featured": {
+			"title": "Featured Article",
+			"article": {
+				"title": "Sewage Water Cleaning in Dubai: Importance and Benefits",
+				"excerpt": "Sewage water cleaning in Dubai is essential for maintaining hygiene, protecting public health, and ensuring proper wastewater management. With rapid urban development and high population density, residential and commercial properties generate large amounts of wastewater daily.",
+				"read_btn": "Read"
+			}
+		},
+		"latest": {
+			"title": "Latest Articles",
+			"articles": {
+				"painting": {
+					"title": "Professional Painting Services for Homes & Businesses in Dubai",
+					"excerpt": "Heat and humidity in Dubai can damage paint over time."
+				},
+				"ac": {
+					"title": "AC Filter Cleaning in Dubai & GCC",
+					"excerpt": "Regular AC filter cleaning ensures cleaner air and better efficiency in Dubai."
+				},
+				"ramadan": {
+					"title": "Ramadan Cleaning Services in Dubai",
+					"excerpt": "Professional Ramadan cleaning in Dubai creates a clean and peaceful space for the holy month."
+				}
+			},
+			"read_btn": "Read"
+		}
+	},
+	"blog_posts": {
+		"ac_filter": {
+			"breadcrumb": "Home / Blog / AC Clean Filters",
+			"title": "AC Clean Filters: Why Regular AC Filter Cleaning Is Critical in Dubai and GCC",
+			"intro": "Air conditioning systems operate almost year-round in Dubai and across the GCC. While AC units provide comfort, dirty filters can compromise air quality and system efficiency. Regular AC filter cleaning in Dubai is essential for maintaining healthy indoor air and reducing energy consumption.",
+			"role_title": "Role of AC Filters in Indoor Air Quality",
+			"role_text": "AC filters trap dust, pollen, bacteria, and airborne pollutants. Over time, these contaminants clog the filters, restricting airflow and forcing the system to work harder. This not only increases electricity bills but also circulates polluted air indoors.",
+			"climate_title": "Importance of AC Filter Cleaning in UAE Climate",
+			"climate_text": "Due to extreme heat and frequent dust exposure, AC systems in the UAE accumulate dirt faster than in other regions. Without regular cleaning, AC filters can become breeding grounds for mold and bacteria, leading to allergies, asthma, and respiratory discomfort.",
+			"signs_title": "Common Signs Your AC Filters Need Cleaning",
+			"signs_text": "Weak cooling performance, unpleasant odors, frequent system breakdowns, and higher energy bills indicate dirty AC filters. Ignoring these signs can reduce the lifespan of the AC unit.",
+			"diy_title": "Professional AC Filter Cleaning vs DIY",
+			"diy_text": "While basic cleaning can be done at home, professional AC cleaning services in Dubai ensure deep cleaning, disinfection, and system inspection. Professionals use specialized tools to safely clean filters, ducts, and coils.",
+			"frequency_title": "Recommended Cleaning Frequency",
+			"frequency_text": "Residential AC filters should be cleaned every one to two months, while commercial HVAC systems require more frequent maintenance due to continuous usage."
+		},
+		"painting": {
+			"breadcrumb": "Home / Blog / Professional Painting Services",
+			"title": "Professional Painting Services: Enhancing Residential and Commercial Properties in Dubai",
+			"intro": "Professional painting services are essential for maintaining the appearance and durability of properties in Dubai. The harsh climate, humidity, and heat can cause paint to fade, crack, or peel over time. Expert painting services ensure long-lasting and visually appealing results.",
+			"importance_title": "Importance of Professional Painting",
+			"importance_text": "Painting is not just decorative; it protects walls from moisture, heat, and wear. Professional painters prepare surfaces properly, choose suitable paints, and apply them with precision.",
+			"residential_title": "Residential Painting Services in Dubai",
+			"residential_text": "Interior and exterior painting services for villas and apartments help homeowners maintain modern, elegant spaces. Professional painters ensure minimal disruption and clean finishes.",
+			"commercial_title": "Commercial Painting Solutions",
+			"commercial_text": "Commercial painting services in Dubai cater to offices, warehouses, malls, and retail outlets. These services are planned to minimize downtime while delivering durable results.",
+			"process_title": "Professional Painting Process",
+			"process_text": "The process includes surface inspection, crack filling, sanding, priming, paint application, and final inspection. High-quality paints suitable for UAE weather conditions are used.",
+			"benefits_title": "Benefits of Hiring Professional Painters",
+			"benefits_text": "Professional painting services save time, reduce material waste, and provide superior finishes that last longer in Dubai's climate."
+		},
+		"ramadan": {
+			"breadcrumb": "Home / Blog / Ramadan Cleaning Services in Dubai",
+			"title": "Ramadan Cleaning Services: Preparing Homes and Businesses in Dubai",
+			"intro": "Ramadan is a special time of spiritual reflection, family gatherings, and hospitality. Professional Ramadan cleaning services in Dubai help create clean and peaceful environments for the holy month.",
+			"importance_title": "Importance of Pre-Ramadan Cleaning",
+			"importance_text": "A clean space promotes calmness and comfort during fasting and prayers. Pre-Ramadan cleaning ensures hygiene and readiness for guests.",
+			"deep_title": "Ramadan Deep Cleaning Services",
+			"deep_text": "These services focus on kitchens, dining areas, living rooms, prayer spaces, and bathrooms, ensuring thorough cleanliness.",
+			"commercial_title": "Commercial Ramadan Cleaning Solutions",
+			"commercial_text": "Mosques, offices, and retail spaces benefit from specialized cleaning services to handle increased visitors during Ramadan.",
+			"benefits_title": "Benefits of Professional Ramadan Cleaning",
+			"benefits_text": "Hiring professionals saves time, reduces stress, and ensures high hygiene standards throughout the month."
+		},
+		"sewage": {
+			"breadcrumb": "Home / Blog / Sewage Water Cleaning in Dubai",
+			"title": "Sewage Water Cleaning in Dubai:<br/>Importance and Benefits",
+			"intro": "Sewage water cleaning in Dubai is essential for maintaining hygiene, protecting public health, and ensuring proper wastewater management. With rapid urban development and high population density, residential and commercial properties generate large amounts of wastewater daily. Regular sewage cleaning helps prevent system failures, unpleasant odors, and environmental pollution.",
+			"what_title": "What is Sewage Water Cleaning?",
+			"what_text": "Sewage water cleaning involves removing sludge, grease, solid waste, and harmful contaminants from sewage tanks, pipelines, and septic systems. Professional sewage cleaning services in Dubai use advanced equipment such as vacuum tankers and high-pressure jetting machines. These tools help remove blockages and ensure smooth wastewater flow while maintaining safety and efficiency.",
+			"benefits_title": "Benefits of Regular Sewage Cleaning",
+			"benefits_text": "Routine sewage cleaning offers several important benefits. It prevents blockages that can lead to sewage overflow and property damage. It also eliminates foul odors caused by waste buildup and reduces the risk of harmful bacteria and infections. Regular maintenance extends the lifespan of plumbing systems and helps avoid costly emergency repairs.",
+			"when_title": "When Do You Need Sewage Cleaning?",
+			"when_text": "Common signs that indicate the need for sewage cleaning include slow drainage, bad smells, sewage backups, and unusual sounds from pipes. Residential properties typically require cleaning every 6 to 12 months, while commercial facilities may need more frequent servicing depending on usage.",
+			"conclusion_title": "Conclusion",
+			"conclusion_text": "Hiring professional sewage cleaning services in Dubai ensures safe waste removal, proper disposal, and compliance with local regulations. Regular sewage maintenance protects your property, improves system efficiency, and supports a clean and healthy environment."
+		}
+	}
 }

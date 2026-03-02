@@ -8,15 +8,15 @@
 	
 	// Service Images Mapping
 	const services = [
-		{ titleKey: 'home.services_list.waste_water', img: '/images/source/Gemini_Generated_Image_254bx6254bx6254b.png' },
-		{ titleKey: 'home.services_list.office_deep', img: '/images/source/branded-workwear-two-cleaners-vacuuming-office-space-organizing-chairs-ensuring-pristine.jpg' },
-		{ titleKey: 'home.services_list.technical', img: '/images/source/Gemini_Generated_Image_543z3w543z3w543z.png' },
-		{ titleKey: 'home.services_list.sewage_tank', img: '/images/source/Gemini_Generated_Image_791v84791v84791v.png' },
-		{ titleKey: 'home.services_list.grease_trap', img: '/images/source/Gemini_Generated_Image_8axk4e8axk4e8axk.png' },
-		{ titleKey: 'home.services_list.sewage_water', img: '/images/source/Gemini_Generated_Image_9ml1759ml1759ml1.png' },
-		{ titleKey: 'home.services_list.deep_cleaning', img: '/images/source/woman-cleaning-couch-with-vacuum-cleaner-home.jpg' },
-		{ titleKey: 'home.services_list.drainage', img: '/images/source/Gemini_Generated_Image_dqijczdqijczdqij.png' },
-		{ titleKey: 'home.services_list.painting', img: '/images/source/Gemini_Generated_Image_f8vg0vf8vg0vf8vg.png' }
+		{ titleKey: 'home.services_list.waste_water', img: '/assets/Landing page/Waste Water Removal.jpeg' },
+		{ titleKey: 'home.services_list.office_deep', img: '/assets/Landing page/Office Deep Cleaning.jpeg' },
+		{ titleKey: 'home.services_list.technical', img: '/assets/Landing page/Technical Cleaning.jpeg' },
+		{ titleKey: 'home.services_list.sewage_tank', img: '/assets/Landing page/Sewage Tank Cleaning.jpeg' },
+		{ titleKey: 'home.services_list.grease_trap', img: '/assets/Landing page/Grease Trap Cleaning.jpeg' },
+		{ titleKey: 'home.services_list.sewage_water', img: '/assets/Landing page/Sewage Water Removal.jpeg' },
+		{ titleKey: 'home.services_list.deep_cleaning', img: '/assets/Landing page/Deep Cleaning.jpeg' },
+		{ titleKey: 'home.services_list.drainage', img: '/assets/Landing page/Drainage Cleaning.jpeg' },
+		{ titleKey: 'home.services_list.painting', img: '/assets/Landing page/Painting.jpeg' }
 	];
 
 	const testimonials = [
@@ -87,7 +87,7 @@
 	</section>
 
 	<!-- Intro Section -->
-	<section class="py-16 md:py-24 overflow-hidden">
+	<section class="py-16 md:py-24">
 		<div class="container mx-auto px-4 flex flex-col md:flex-row gap-12 items-start relative">
 			<div class="md:w-1/2 pt-12">
 				<h2 class="text-3xl md:text-[60px] font-bold text-gray-900 mb-6 font-['PF_Bague_Sans_Pro'] leading-tight md:leading-normal" style="color: color(display-p3 0.0481 0.0481 0.0481);">
@@ -102,7 +102,7 @@
 			</div>
 			
 			<!-- Quote Form -->
-			<div class="relative z-20 w-full md:w-125 md:-mt-48 bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 ml-auto">
+			<div class="relative z-20 w-full md:w-125 md:-mt-48 bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 ml-auto flex flex-col justify-center shrink-0">
 				<h3 class="text-2xl font-bold text-gray-900 mb-2">{$_('home.quote_form.title')}</h3>
 				<p class="text-gray-500 text-sm mb-6">{$_('home.quote_form.subtitle')}</p>
 				
@@ -152,17 +152,30 @@
 					<h2 class="text-4xl font-bold text-gray-900 mb-2">{$_('home.services_section.title')}</h2>
 					<p class="text-gray-500">{$_('home.services_section.subtitle')}</p>
 				</div>
-				<a href="/services" class="bg-homigo-green hover:bg-homigo-dark text-white px-6 py-2 rounded-md text-sm font-semibold transition-colors">
-					{$_('home.services_section.view_menu')}
+				<a href="/quote" class="bg-homigo-green hover:bg-homigo-dark text-white px-6 py-2 rounded-md text-sm font-semibold transition-colors">
+					{$_('nav.quote')}
 				</a>
 			</div>
 			
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
 				{#each services as service}
-					<div class="group relative overflow-hidden rounded-xl h-64 shadow-md cursor-pointer">
+					<div class="group relative overflow-hidden h-96 shadow-md cursor-pointer">
 						<img src={service.img} alt={$_ (service.titleKey)} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-						<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent"></div>
-						<div class="absolute bottom-0 left-0 p-6">
+						
+						<!-- Default Gradient -->
+						<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 group-hover:opacity-0"></div>
+
+						<!-- Hover Overlay -->
+						<div class="absolute inset-0 bg-[#34A853]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]"></div>
+
+						<!-- Hover Button -->
+						<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+							<a href="/quote" class="bg-[#E8F5E9] text-[#1B5E20] px-4 py-2 rounded-lg font-bold text-sm shadow-sm hover:bg-white transition-colors">
+								{$_('home.quote_form.submit')}
+							</a>
+						</div>
+
+						<div class="absolute bottom-0 left-0 p-6 z-10">
 							<h3 class="text-white font-bold text-lg">{$_ (service.titleKey)}</h3>
 						</div>
 					</div>
@@ -179,22 +192,22 @@
 
 			<div class="grid md:grid-cols-3 gap-12 relative">
 				<!-- Connector Line (Desktop) -->
-				<div class="hidden md:block absolute top-8 left-[16%] right-[16%] h-0.5 bg-gray-200 -z-10"></div>
+				<div class="hidden md:block absolute top-16 left-[16%] right-[16%] h-0.5 bg-gray-200 -z-10"></div>
 
-				<div class="flex flex-col items-center">
-					<div class="w-16 h-16 bg-homigo-green rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg ring-4 ring-white">1</div>
-					<h3 class="font-bold text-xl mb-3">{$_('home.process.step1.title')}</h3>
-					<p class="text-gray-500 text-sm max-w-xs">{$_('home.process.step1.desc')}</p>
+				<div class="flex flex-col items-center p-8 border border-gray-200 rounded-lg bg-white h-full relative z-10">
+					<div class="w-16 h-16 bg-homigo-green rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 -mt-16 ring-4 ring-white shadow-lg">1</div>
+					<h3 class="font-bold text-xl mb-3 text-center">{$_('home.process.step1.title')}</h3>
+					<p class="text-gray-500 text-sm max-w-xs text-center">{$_('home.process.step1.desc')}</p>
 				</div>
-				<div class="flex flex-col items-center">
-					<div class="w-16 h-16 bg-homigo-green rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg ring-4 ring-white">2</div>
-					<h3 class="font-bold text-xl mb-3">{$_('home.process.step2.title')}</h3>
-					<p class="text-gray-500 text-sm max-w-xs">{$_('home.process.step2.desc')}</p>
+				<div class="flex flex-col items-center p-8 border border-gray-200 rounded-lg bg-white h-full relative z-10">
+					<div class="w-16 h-16 bg-homigo-green rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 -mt-16 ring-4 ring-white shadow-lg">2</div>
+					<h3 class="font-bold text-xl mb-3 text-center">{$_('home.process.step2.title')}</h3>
+					<p class="text-gray-500 text-sm max-w-xs text-center">{$_('home.process.step2.desc')}</p>
 				</div>
-				<div class="flex flex-col items-center">
-					<div class="w-16 h-16 bg-homigo-green rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 shadow-lg ring-4 ring-white">3</div>
-					<h3 class="font-bold text-xl mb-3">{$_('home.process.step3.title')}</h3>
-					<p class="text-gray-500 text-sm max-w-xs">{$_('home.process.step3.desc')}</p>
+				<div class="flex flex-col items-center p-8 border border-gray-200 rounded-lg bg-white h-full relative z-10">
+					<div class="w-16 h-16 bg-homigo-green rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 -mt-16 ring-4 ring-white shadow-lg">3</div>
+					<h3 class="font-bold text-xl mb-3 text-center">{$_('home.process.step3.title')}</h3>
+					<p class="text-gray-500 text-sm max-w-xs text-center">{$_('home.process.step3.desc')}</p>
 				</div>
 			</div>
 
@@ -405,7 +418,7 @@
 	<!-- Testimonials -->
 	<section class="py-20 bg-white">
 		<div class="container mx-auto px-4">
-			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">{$_('home.testimonials.title')}</h2>
+			<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">{@html $_('home.testimonials.title')}</h2>
 			
 			<div class="grid md:grid-cols-3 gap-8">
 				{#each testimonials as testimonial}

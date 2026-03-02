@@ -4,11 +4,9 @@
 	const heroBg = '/assets/About Us/Frame hero.jpeg'; // Using painting/roller image for hero
 	const aboutImage1 = '/assets/About Us/section2_image1.jpeg'; // Building exterior cleaning
 	const aboutImage2 = '/assets/About Us/section2_image2.jpeg'; // High rise cleaning
-	const aboutImage3 = '/assets/About Us/Frame 01.png'; // Office cleaning
-	const herosvg1 = '/assets/About Us/hero svg1.svg';
-	const herosvg2 = '/assets/About Us/hero svg2.svg';
-	const missionIcon = '/about/dart-mission-goal-success-svgrepo-com (1) 1.svg';
-	const visionIcon = '/about/vision-focus-svgrepo-com 1.svg';
+	
+	const missionIcon = '/assets/About Us/mission.svg';
+	const visionIcon = '/assets/About Us/vision.svg';
 </script>
 
 <div class="bg-gray-50 pb-20 font-['SF_Pro']">
@@ -100,7 +98,7 @@
 				<span class="relative inline-block">
 					{$_('about.cta.title_trusted')}
 					<svg
-						class="absolute -bottom-2 left-0 h-3 w-full text-red-500"
+						class="absolute -bottom-2 left-0 h-3 w-full text-red-500 transform rotate-180"
 						viewBox="0 0 100 10"
 						preserveAspectRatio="none"
 					>
