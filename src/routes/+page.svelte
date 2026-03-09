@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-	import { _ } from 'svelte-i18n';
+	import { _ } from '$lib/i18n/index';
+	import SEO from '$lib/components/SEO.svelte';
+	
+	let isMounted = true;
 
 	// Image Placeholders - Using available assets
 	const heroBg = '/images/bannar.png';
@@ -21,22 +23,22 @@
 
 	const testimonials = [
 		{
+			textKey: 'home.testimonials_items.item1.text',
 			nameKey: 'home.testimonials_items.item1.name',
 			dateKey: 'home.testimonials_items.item1.date',
-			textKey: 'home.testimonials_items.item1.text',
-			rating: 5
+			img: '/assets/Testimonial/Adam.svg'
 		},
 		{
+			textKey: 'home.testimonials_items.item2.text',
 			nameKey: 'home.testimonials_items.item2.name',
 			dateKey: 'home.testimonials_items.item2.date',
-			textKey: 'home.testimonials_items.item2.text',
-			rating: 5
+			img: '/assets/Testimonial/Noor Mohammed.svg'
 		},
 		{
+			textKey: 'home.testimonials_items.item3.text',
 			nameKey: 'home.testimonials_items.item3.name',
 			dateKey: 'home.testimonials_items.item3.date',
-			textKey: 'home.testimonials_items.item3.text',
-			rating: 5
+			img: '/assets/Testimonial/Zara.svg'
 		}
 	];
 
@@ -48,12 +50,62 @@
 		{ questionKey: 'home.faq_items.q5.question', answerKey: 'home.faq_items.q5.answer' }
 	];
 
-	let activeFaq = $state(0);
+	let activeFaq = 0;
+	let isSubmitting = false;
+	let submitStatus = '';
 
 	function toggleFaq(index: number) {
 		activeFaq = activeFaq === index ? -1 : index;
 	}
+
+	function optionLabel(key: string) {
+		return $_(key);
+	}
+
+	async function handleSubmit(e: Event) {
+		e.preventDefault();
+		isSubmitting = true;
+		submitStatus = '';
+
+		const form = e.target as HTMLFormElement;
+		const formData = new FormData(form);
+		const object = Object.fromEntries(formData);
+		// Replace with your Web3Forms Access Key
+		object.access_key = 'YOUR_ACCESS_KEY_HERE'; 
+
+		const json = JSON.stringify(object);
+
+		try {
+			const response = await fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					'Accept': 'application/json'
+				},
+				body: json
+			});
+			
+			const result = await response.json();
+			if (result.success) {
+				submitStatus = 'success';
+				form.reset();
+			} else {
+				console.error('Web3Forms Error:', result);
+				submitStatus = 'error';
+			}
+		} catch (error) {
+			console.error('Submission Error:', error);
+			submitStatus = 'error';
+		} finally {
+			isSubmitting = false;
+		}
+	}
 </script>
+
+<SEO 
+	title="Homigo - Professional Deep Cleaning & Technical Services Dubai"
+	description="Top-rated cleaning company in Dubai offering deep cleaning, office cleaning, sewage tank cleaning, and technical services. Book now!"
+/>
 
 <div class="bg-white font-sans">
 	<!-- Hero Section -->
@@ -62,6 +114,7 @@
 		<div class="container mx-auto px-4 py-20 relative z-10 flex flex-col items-center justify-center h-full">
 			<!-- Hero Text -->
 			<div class="text-white w-full text-center flex flex-col items-center">
+				{#if isMounted}
 				<div class="flex flex-col justify-center items-center w-full max-w-224.75 h-auto md:h-48 mb-6">
 					<h1 class="text-[#FFFFFF] text-center font-['PF_Bague_Sans_Pro'] text-4xl md:text-[77.222px] font-normal leading-[1.1] md:leading-[92.145%]">
 						{$_('home.hero.title_1')}<br/>
@@ -77,6 +130,7 @@
 				<a href="/quote" class="inline-block bg-homigo-green hover:bg-homigo-dark text-white font-semibold py-3 px-8 rounded-md transition-colors shadow-lg">
 					{$_('home.hero.cta')}
 				</a>
+				{/if}
 			</div>
 			
 
@@ -106,39 +160,51 @@
 				<h3 class="text-2xl font-bold text-gray-900 mb-2">{$_('home.quote_form.title')}</h3>
 				<p class="text-gray-500 text-sm mb-6">{$_('home.quote_form.subtitle')}</p>
 				
-				<form class="space-y-4">
+				<form class="space-y-4" onsubmit={handleSubmit}>
 					<div>
 						<label for="name" class="block text-xs font-semibold text-gray-400 mb-1 ml-1">{$_('home.quote_form.name')}</label>
-						<input id="name" type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:ring-2 focus:ring-homigo-green/20 outline-none transition-all" />
+						<input id="name" name="name" required type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:ring-2 focus:ring-homigo-green/20 outline-none transition-all" />
 					</div>
 					<div>
 						<label for="phone" class="block text-xs font-semibold text-gray-400 mb-1 ml-1">{$_('home.quote_form.phone')}</label>
-						<input id="phone" type="tel" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:ring-2 focus:ring-homigo-green/20 outline-none transition-all" />
+						<input id="phone" name="phone" required type="tel" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:ring-2 focus:ring-homigo-green/20 outline-none transition-all" />
 					</div>
 					<div>
 						<label for="email" class="block text-xs font-semibold text-gray-400 mb-1 ml-1">{$_('home.quote_form.email')}</label>
-						<input id="email" type="email" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:ring-2 focus:ring-homigo-green/20 outline-none transition-all" />
+						<input id="email" name="email" required type="email" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:ring-2 focus:ring-homigo-green/20 outline-none transition-all" />
 					</div>
 					<div>
 						<label for="address" class="block text-xs font-semibold text-gray-400 mb-1 ml-1">{$_('home.quote_form.address')}</label>
-						<input id="address" type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:ring-2 focus:ring-homigo-green/20 outline-none transition-all" />
+						<input id="address" name="address" required type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:ring-2 focus:ring-homigo-green/20 outline-none transition-all" />
 					</div>
 					<div>
 						<label for="service" class="block text-xs font-semibold text-gray-400 mb-1 ml-1">{$_('home.quote_form.service_label')}</label>
 						<div class="relative">
-							<select id="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:ring-2 focus:ring-homigo-green/20 outline-none transition-all appearance-none text-gray-600">
-								<option>{$_('home.quote_form.service_options.window')}</option>
-								<option>{$_('home.quote_form.service_options.deep')}</option>
-								<option>{$_('home.quote_form.service_options.maintenance')}</option>
+							<select id="service" name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:ring-2 focus:ring-homigo-green/20 outline-none transition-all appearance-none text-gray-600">
+								<option>{optionLabel('home.quote_form.service_options.waste_water')}</option>
+								<option>{optionLabel('home.quote_form.service_options.office_deep')}</option>
+								<option>{optionLabel('home.quote_form.service_options.technical')}</option>
+								<option>{optionLabel('home.quote_form.service_options.sewage_tank')}</option>
+								<option>{optionLabel('home.quote_form.service_options.drain_line')}</option>
+								<option>{optionLabel('home.quote_form.service_options.sewage_water')}</option>
+								<option>{optionLabel('home.quote_form.service_options.deep_cleaning')}</option>
+								<option>{optionLabel('home.quote_form.service_options.drainage')}</option>
+								<option>{optionLabel('home.quote_form.service_options.painting')}</option>
 							</select>
 							<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
 								<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
 							</div>
 						</div>
 					</div>
-					<button type="submit" class="w-full bg-[#1B5E20] hover:bg-[#144a19] text-white font-bold py-4 rounded-lg transition-colors mt-4 shadow-lg">
-						{$_('home.quote_form.submit')}
+					<button type="submit" disabled={isSubmitting} class="w-full bg-[#1B5E20] hover:bg-[#144a19] text-white font-bold py-4 rounded-lg transition-colors mt-4 shadow-lg disabled:opacity-70 disabled:cursor-not-allowed">
+						{isSubmitting ? 'Sending...' : $_('home.quote_form.submit')}
 					</button>
+					{#if submitStatus === 'success'}
+						<p class="text-green-600 text-center text-sm mt-2">Quote request sent successfully!</p>
+					{/if}
+					{#if submitStatus === 'error'}
+						<p class="text-red-600 text-center text-sm mt-2">Failed to send request. Please try again.</p>
+					{/if}
 				</form>
 			</div>
 		</div>
@@ -160,7 +226,7 @@
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
 				{#each services as service}
 					<div class="group relative overflow-hidden h-96 shadow-md cursor-pointer">
-						<img src={service.img} alt={$_ (service.titleKey)} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
+						<img src={service.img} alt={$_('home.services_section.title')} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
 						
 						<!-- Default Gradient -->
 						<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 group-hover:opacity-0"></div>
@@ -176,7 +242,7 @@
 						</div>
 
 						<div class="absolute bottom-0 left-0 p-6 z-10">
-							<h3 class="text-white font-bold text-lg">{$_ (service.titleKey)}</h3>
+							<h3 class="text-white font-bold text-lg">{$_(service.titleKey)}</h3>
 						</div>
 					</div>
 				{/each}
@@ -194,17 +260,17 @@
 				<!-- Connector Line (Desktop) -->
 				<div class="hidden md:block absolute top-16 left-[16%] right-[16%] h-0.5 bg-gray-200 -z-10"></div>
 
-				<div class="flex flex-col items-center p-8 border border-gray-200 rounded-lg bg-white h-full relative z-10">
+				<div class="flex flex-col items-center p-8 border border-gray-200 rounded-lg bg-white h-full relative z-10 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
 					<div class="w-16 h-16 bg-homigo-green rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 -mt-16 ring-4 ring-white shadow-lg">1</div>
 					<h3 class="font-bold text-xl mb-3 text-center">{$_('home.process.step1.title')}</h3>
 					<p class="text-gray-500 text-sm max-w-xs text-center">{$_('home.process.step1.desc')}</p>
 				</div>
-				<div class="flex flex-col items-center p-8 border border-gray-200 rounded-lg bg-white h-full relative z-10">
+				<div class="flex flex-col items-center p-8 border border-gray-200 rounded-lg bg-white h-full relative z-10 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
 					<div class="w-16 h-16 bg-homigo-green rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 -mt-16 ring-4 ring-white shadow-lg">2</div>
 					<h3 class="font-bold text-xl mb-3 text-center">{$_('home.process.step2.title')}</h3>
 					<p class="text-gray-500 text-sm max-w-xs text-center">{$_('home.process.step2.desc')}</p>
 				</div>
-				<div class="flex flex-col items-center p-8 border border-gray-200 rounded-lg bg-white h-full relative z-10">
+				<div class="flex flex-col items-center p-8 border border-gray-200 rounded-lg bg-white h-full relative z-10 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
 					<div class="w-16 h-16 bg-homigo-green rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6 -mt-16 ring-4 ring-white shadow-lg">3</div>
 					<h3 class="font-bold text-xl mb-3 text-center">{$_('home.process.step3.title')}</h3>
 					<p class="text-gray-500 text-sm max-w-xs text-center">{$_('home.process.step3.desc')}</p>
@@ -263,7 +329,7 @@
 					<div class="md:w-1/2 flex justify-center relative">
 						<div class="relative">
 							<div class="absolute -inset-4 bg-blue-100 rounded-2xl -z-10 -rotate-3"></div>
-							<img src="/assets/Landing page/ggvdvdvd_compressed.jpeg" alt="Flexible Scheduling" class="rounded-xl shadow-lg w-full max-w-md h-64 object-cover" />
+							<img src="/assets/Landing page/ggvdvdvd_compressed.jpeg" alt="Flexible Scheduling" class="rounded-xl shadow-lg w-full max-w-md object-cover" />
 							<!-- Clock Overlay Badge -->
 							<div class="absolute -bottom-40 -right-26 hidden md:block">
 								<svg xmlns="http://www.w3.org/2000/svg" width="208.313" height="241.212" viewBox="0 0 315 492" fill="none" style="filter: drop-shadow(0 8px 17px color(display-p3 0.502 0.502 0.502 / 0.49)) drop-shadow(0 30px 30px color(display-p3 0.502 0.502 0.502 / 0.43)) drop-shadow(0 68px 41px color(display-p3 0.502 0.502 0.502 / 0.25)) drop-shadow(0 120px 48px color(display-p3 0.502 0.502 0.502 / 0.07)) drop-shadow(0 188px 53px color(display-p3 0.502 0.502 0.502 / 0.01));">
@@ -422,23 +488,25 @@
 			
 			<div class="grid md:grid-cols-3 gap-8">
 				{#each testimonials as testimonial}
-					<div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+					<div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col h-full">
 						<div class="flex text-yellow-400 mb-4">
 								{#each Array(5) as unused}
 									<svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
 								{/each}
 						</div>
-						<p class="text-gray-600 mb-6 italic">"{$_ (testimonial.textKey)}"</p>
-						<div class="flex items-center gap-3">
-							<div class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">
-								{$_ (testimonial.nameKey)[0]}
+						<p class="text-gray-600 mb-6 text-sm leading-relaxed grow">{$_(testimonial.textKey)}</p>
+						<div class="mb-4">
+							<img src="/assets/Testimonial/Google.svg" alt="Google" class="h-6" />
+						</div>
+						<div class="flex items-center gap-3 border-t border-gray-100 pt-4">
+							<div class="w-10 h-10 rounded-full overflow-hidden">
+								<img src={testimonial.img} alt={$_(testimonial.nameKey)} class="w-full h-full object-cover" />
 							</div>
 							<div>
-								<p class="font-bold text-sm text-gray-900">{$_ (testimonial.nameKey)}</p>
-								<p class="text-xs text-gray-400">{$_ (testimonial.dateKey)}</p>
+								<p class="font-bold text-sm text-gray-900">{$_(testimonial.nameKey)}</p>
 							</div>
-							<div class="ml-auto">
-								<svg class="w-5 h-5 text-gray-300" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1.93 14.15l-4.24-4.24 1.41-1.41 2.83 2.83 7.07-7.07 1.41 1.41-8.48 8.48z"/></svg>
+							<div class="ml-auto text-xs text-gray-400">
+								{$_(testimonial.dateKey)}
 							</div>
 						</div>
 					</div>
@@ -468,14 +536,14 @@
 								class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
 								onclick={() => toggleFaq(i)}
 							>
-								<span class="font-semibold text-gray-800">{$_ (faq.questionKey)}</span>
+								<span class="font-semibold text-gray-800">{$_(faq.questionKey)}</span>
 								<svg class="w-5 h-5 text-gray-400 transform transition-transform duration-200 {activeFaq === i ? 'rotate-180' : ''}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 								</svg>
 							</button>
 							{#if activeFaq === i}
 								<div class="px-6 pb-4 text-gray-600 border-t border-gray-100 pt-4">
-									{$_ (faq.answerKey)}
+									{$_(faq.answerKey)}
 								</div>
 							{/if}
 						</div>

@@ -1,11 +1,17 @@
 <script lang="ts">
 	import { _ } from 'svelte-i18n';
+	import SEO from '$lib/components/SEO.svelte';
+
 	// Using the provided assets from the static folder
-	const cleaningTools = '/contact/hero.jpg'; // Best match for the cleaning tools background
-	const mapPlaceholder = '/images/source/Gemini_Generated_Image_dqijczdqijczdqij.png'; // Placeholder for map
+	const cleaningTools = '/assets/Contact Us/cleaning-supplies-room-with-blue-walls 1_compressed.jpeg'; // Best match for the cleaning tools background
 </script>
 
-<div class="font-['SF_Pro']">
+<SEO 
+	title="Contact Homigo - Book Your Cleaning Service in Dubai"
+	description="Get in touch with Homigo for professional cleaning quotes. Call us, WhatsApp us, or visit our Dubai office. 24/7 customer support available."
+/>
+
+<div class="font-['SF_Pro'] bg-white">
 	<!-- Hero Section -->
 	<section class="relative h-150 w-full overflow-hidden">
 		<!-- Background Image -->
@@ -58,9 +64,7 @@
 				<!-- Email -->
 				<div class="flex items-start gap-6">
 					<div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#15562E]">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-						</svg>
+						<img src="/assets/Contact Us/email.svg" alt="Email Icon" class="h-7 w-7" />
 					</div>
 					<div>
 						<h3 class="mb-2 text-xl font-bold text-gray-900">{$_('contact.details.email_title')}</h3>

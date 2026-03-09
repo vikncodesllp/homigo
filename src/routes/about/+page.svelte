@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { _ } from 'svelte-i18n';
+	import SEO from '$lib/components/SEO.svelte';
+
 	// Assets
 	const heroBg = '/assets/About Us/Frame hero.jpeg'; // Using painting/roller image for hero
 	const aboutImage1 = '/assets/About Us/section2_image1.jpeg'; // Building exterior cleaning
@@ -9,7 +11,12 @@
 	const visionIcon = '/assets/About Us/vision.svg';
 </script>
 
-<div class="bg-gray-50 pb-20 font-['SF_Pro']">
+<SEO 
+	title="About Homigo - Leading Cleaning Company in Dubai"
+	description="Learn about Homigo Technical Services, Dubai's trusted partner for professional cleaning, maintenance, and facility management services."
+/>
+
+<div class="bg-gray-50 font-['SF_Pro']">
 	<!-- Hero Section -->
 	<section class="relative flex min-h-150 w-full items-center overflow-hidden bg-[#A6D5E4]">
 		<img
@@ -89,7 +96,7 @@
 	</section>
 
 	<!-- CTA Banner -->
-	<section class="bg-[#F0FDF4] py-20">
+	<section class="py-20" style="background: linear-gradient(135deg, rgba(0, 249, 90, 0.08) 0%, rgba(0, 201, 0, 0.08) 100%);">
 		<div
 			class="container mx-auto flex flex-col items-center justify-between gap-8 px-4 md:flex-row"
 		>

@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { _ } from 'svelte-i18n';
+	import SEO from '$lib/components/SEO.svelte';
 	// Assets - Mapping best guess from available images based on content
 	const heroBg = '/assets/Blog/fire-hydrant-use-structure-vbfvbfbfbf_compressed.jpeg'; // Using a pipe/industrial image for sewage theme
-	const featuredImage = '/blog/featuredImage.png'; // Sewage/Water truck image
+	const featuredImage = '/assets/Blog/Sewage water cleaning.jpeg'; // Sewage/Water truck image
 	
 	const articles = [
 		{
@@ -32,6 +33,11 @@
 	];
 </script>
 
+<SEO 
+	title="Homigo Blog - Cleaning Tips & Industry Insights"
+	description="Read the latest news, cleaning tips, and insights from Dubai's leading cleaning experts. Stay updated with Homigo."
+/>
+
 <div class="font-['SF_Pro']">
 	<!-- Hero Section -->
 	<section class="relative h-125 w-full overflow-hidden">
@@ -60,7 +66,7 @@
 		<section class="mb-20">
 			<h2 class="mb-8 text-3xl font-bold text-black">{$_('blog_page.featured.title')}</h2>
 			<div class="rounded-3xl border border-gray-100 bg-white p-6 shadow-sm transition-shadow hover:shadow-md md:flex md:gap-8">
-				<div class="h-125 w-full overflow-hidden rounded-2xl md:w-1/2">
+				<div class="h-100 w-full overflow-hidden rounded-2xl md:w-1/2">
 					<img 
 						src={featuredImage} 
 						alt={$_('blog_page.featured.article.title')} 
@@ -71,7 +77,7 @@
 					<h3 class="mb-4 text-2xl font-bold leading-tight text-gray-900">
 						{$_('blog_page.featured.article.title')}
 					</h3>
-					<p class="mb-6 text-gray-600 leading-relaxed">
+					<p class="mb-6 text-lg text-gray-600 leading-relaxed line-clamp-3">
 						{$_('blog_page.featured.article.excerpt')}
 					</p>
 					
