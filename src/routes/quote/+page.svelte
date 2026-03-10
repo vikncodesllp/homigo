@@ -91,15 +91,15 @@
 								name="service"
 								class="w-full bg-gray-50 border-none rounded-lg px-4 py-3.5 appearance-none focus:ring-2 focus:ring-[#15562E] focus:outline-none transition-all text-gray-700"
 							>
-								<option>{optionLabel('home.quote_form.service_options.waste_water')}</option>
-								<option>{optionLabel('home.quote_form.service_options.office_deep')}</option>
-								<option>{optionLabel('home.quote_form.service_options.technical')}</option>
-								<option>{optionLabel('home.quote_form.service_options.sewage_tank')}</option>
-								<option>{optionLabel('home.quote_form.service_options.drain_line')}</option>
-								<option>{optionLabel('home.quote_form.service_options.sewage_water')}</option>
-								<option>{optionLabel('home.quote_form.service_options.deep_cleaning')}</option>
-								<option>{optionLabel('home.quote_form.service_options.drainage')}</option>
-								<option>{optionLabel('home.quote_form.service_options.painting')}</option>
+								<option>{optionLabel('home.services_list.waste_water')}</option>
+								<option>{optionLabel('home.services_list.office_deep')}</option>
+								<option>{optionLabel('home.services_list.technical')}</option>
+								<option>{optionLabel('home.services_list.sewage_tank')}</option>
+								<option>{optionLabel('home.services_list.grease_trap')}</option>
+								<option>{optionLabel('home.services_list.sewage_water')}</option>
+								<option>{optionLabel('home.services_list.deep_cleaning')}</option>
+								<option>{optionLabel('home.services_list.drainage')}</option>
+								<option>{optionLabel('home.services_list.painting')}</option>
 							</select>
 							<div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
 								<svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -181,15 +181,15 @@
 						<label for="service" class="block text-xs font-semibold text-gray-400 mb-1 ml-1">{$_('home.quote_form.service_label')}</label>
 						<div class="relative">
 							<select id="service" name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:ring-2 focus:ring-homigo-green/20 outline-none transition-all appearance-none text-gray-600">
-								<option>{optionLabel('home.quote_form.service_options.waste_water')}</option>
-								<option>{optionLabel('home.quote_form.service_options.office_deep')}</option>
-								<option>{optionLabel('home.quote_form.service_options.technical')}</option>
-								<option>{optionLabel('home.quote_form.service_options.sewage_tank')}</option>
-								<option>{optionLabel('home.quote_form.service_options.drain_line')}</option>
-								<option>{optionLabel('home.quote_form.service_options.sewage_water')}</option>
-								<option>{optionLabel('home.quote_form.service_options.deep_cleaning')}</option>
-								<option>{optionLabel('home.quote_form.service_options.drainage')}</option>
-								<option>{optionLabel('home.quote_form.service_options.painting')}</option>
+								<option>{optionLabel('home.services_list.waste_water')}</option>
+								<option>{optionLabel('home.services_list.office_deep')}</option>
+								<option>{optionLabel('home.services_list.technical')}</option>
+								<option>{optionLabel('home.services_list.sewage_tank')}</option>
+								<option>{optionLabel('home.services_list.grease_trap')}</option>
+								<option>{optionLabel('home.services_list.sewage_water')}</option>
+								<option>{optionLabel('home.services_list.deep_cleaning')}</option>
+								<option>{optionLabel('home.services_list.drainage')}</option>
+								<option>{optionLabel('home.services_list.painting')}</option>
 							</select>
 							<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
 								<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
