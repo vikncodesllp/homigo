@@ -93,8 +93,8 @@
 			"cta": "Get a Free Quote"
 		},
 		"testimonials": {
-      "title": "Why Our Clients <span class=\"relative inline-block\">Trust<svg class=\"absolute -bottom-3 left-0 w-full h-3 text-[#C91C1C]\" viewBox=\"0 0 100 10\" preserveAspectRatio=\"none\"><path d=\"M0 0 Q 50 10 100 0\" stroke=\"currentColor\" stroke-width=\"3\" fill=\"none\" /></svg></span> Homigo"
-    },
+			"title": "Why Our Clients <span class=\"relative inline-block\">Trust<svg class=\"absolute -bottom-2 left-0 w-full\" viewBox=\"0 0 162 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3.00012 26.4279C24.3185 9.76105 94.6324 -6.76008 158.819 9.98415\" stroke=\"#AE0303\" stroke-width=\"6\" stroke-linecap=\"round\"/></svg></span> Homigo"
+		},
 		"testimonials_items": {
 			"item1": {
 				"name": "Allen",

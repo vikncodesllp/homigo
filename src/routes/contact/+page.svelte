@@ -33,7 +33,11 @@
 
 		<!-- Content -->
 		<div class="relative z-10 flex h-full flex-col items-center justify-center text-center text-white pt-20">
-			<p class="mb-4 text-sm font-medium tracking-wide">{$_('contact.hero.breadcrumb')}</p>
+			<nav class="mb-4 flex items-center gap-2 text-sm font-medium tracking-wide" aria-label="Breadcrumb">
+				<a href="/" class="hover:underline">{$_('nav.home')}</a>
+				<span>/</span>
+				<span aria-current="page">{$_('contact.hero.title')}</span>
+			</nav>
 			<h1 class="mb-6 text-6xl font-bold tracking-tight drop-shadow-md">{$_('contact.hero.title')}</h1>
 			<p class="max-w-2xl px-4 text-lg font-medium leading-relaxed drop-shadow-sm">
 				{@html $_('contact.hero.desc').replace('\n', '<br />')}

@@ -1,0 +1,1 @@
+import{_ as a}from"./PPVm8Dsz.js";import{r as e,g as o,i as r}from"./DWxBFkAJ.js";e("en",()=>a(()=>import("./C28lp9Yy.js"),[],import.meta.url));e("ar",()=>a(()=>import("./KGFqMYJJ.js"),[],import.meta.url));const t=o(),i=t?.toLowerCase().startsWith("ar")?"ar":"en";r({fallbackLocale:"en",initialLocale:i});

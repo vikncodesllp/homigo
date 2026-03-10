@@ -5,10 +5,30 @@
 
 	let isSubmitting = $state(false);
 	let submitStatus = $state('');
+	let selectedService = $state('waste_water');
+
+	const serviceKeys: Record<string, string> = {
+		waste_water: 'home.services_list.waste_water',
+		office_deep: 'home.services_list.office_deep',
+		technical: 'home.services_list.technical',
+		sewage_tank: 'home.services_list.sewage_tank',
+		grease_trap: 'home.services_list.grease_trap',
+		sewage_water: 'home.services_list.sewage_water',
+		deep_cleaning: 'home.services_list.deep_cleaning',
+		drainage: 'home.services_list.drainage',
+		painting: 'home.services_list.painting'
+	};
 
 	function optionLabel(key: string) {
 		return $_(key);
 	}
+
+	onMount(() => {
+		const service = new URLSearchParams(window.location.search).get('service');
+		if (service && service in serviceKeys) {
+			selectedService = service;
+		}
+	});
 
 	async function handleSubmit(e: Event) {
 		e.preventDefault();
@@ -18,6 +38,7 @@
 		const form = e.target as HTMLFormElement;
 		const formData = new FormData(form);
 		const object = Object.fromEntries(formData);
+		object.service = optionLabel(serviceKeys[selectedService]);
 		// Replace with your Web3Forms Access Key
 		object.access_key = 'YOUR_ACCESS_KEY_HERE'; 
 
@@ -89,17 +110,18 @@
 							<select 
 								id="service" 
 								name="service"
+								bind:value={selectedService}
 								class="w-full bg-gray-50 border-none rounded-lg px-4 py-3.5 appearance-none focus:ring-2 focus:ring-[#15562E] focus:outline-none transition-all text-gray-700"
 							>
-								<option>{optionLabel('home.services_list.waste_water')}</option>
-								<option>{optionLabel('home.services_list.office_deep')}</option>
-								<option>{optionLabel('home.services_list.technical')}</option>
-								<option>{optionLabel('home.services_list.sewage_tank')}</option>
-								<option>{optionLabel('home.services_list.grease_trap')}</option>
-								<option>{optionLabel('home.services_list.sewage_water')}</option>
-								<option>{optionLabel('home.services_list.deep_cleaning')}</option>
-								<option>{optionLabel('home.services_list.drainage')}</option>
-								<option>{optionLabel('home.services_list.painting')}</option>
+								<option value="waste_water">{optionLabel('home.services_list.waste_water')}</option>
+								<option value="office_deep">{optionLabel('home.services_list.office_deep')}</option>
+								<option value="technical">{optionLabel('home.services_list.technical')}</option>
+								<option value="sewage_tank">{optionLabel('home.services_list.sewage_tank')}</option>
+								<option value="grease_trap">{optionLabel('home.services_list.grease_trap')}</option>
+								<option value="sewage_water">{optionLabel('home.services_list.sewage_water')}</option>
+								<option value="deep_cleaning">{optionLabel('home.services_list.deep_cleaning')}</option>
+								<option value="drainage">{optionLabel('home.services_list.drainage')}</option>
+								<option value="painting">{optionLabel('home.services_list.painting')}</option>
 							</select>
 							<div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
 								<svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

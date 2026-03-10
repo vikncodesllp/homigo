@@ -53,7 +53,11 @@
 
 		<!-- Content -->
 		<div class="relative z-10 flex h-full flex-col items-center justify-center text-center text-white pt-20">
-			<p class="mb-2 text-sm font-medium tracking-wide text-gray-300">{$_('blog_page.hero.breadcrumb')}</p>
+			<nav class="mb-4 flex items-center gap-2 text-sm font-medium tracking-wide" aria-label="Breadcrumb">
+				<a href="/" class="hover:underline">{$_('nav.home')}</a>
+				<span>/</span>
+				<span aria-current="page">{$_('blog_page.hero.title')}</span>
+			</nav>
 			<h1 class="mb-4 text-6xl font-bold tracking-tight">{$_('blog_page.hero.title')}</h1>
 			<p class="max-w-xl px-4 text-lg font-medium text-gray-200">
 				{$_('blog_page.hero.desc')}

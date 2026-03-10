@@ -30,7 +30,11 @@
 		>
 			<!-- Left Content -->
 			<div class="flex w-full flex-col justify-center md:w-1/2">
-				<p class="mb-4 text-sm font-medium text-gray-700">{$_('about.hero.breadcrumb')}</p>
+				<nav class="mb-4 flex items-center gap-2 text-sm font-medium tracking-wide" aria-label="Breadcrumb">
+					<a href="/" class="hover:underline">{$_('nav.home')}</a>
+					<span>/</span>
+					<span aria-current="page">{$_('about.hero.title')}</span>
+				</nav>
 				<h1 class="mb-6 text-6xl font-black tracking-tight text-black">{$_('about.hero.title')}</h1>
 				<p class="max-w-lg text-xl leading-relaxed font-medium text-gray-800">
 					{$_('about.hero.desc')}

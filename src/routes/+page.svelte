@@ -10,15 +10,15 @@
 	
 	// Service Images Mapping
 	const services = [
-		{ titleKey: 'home.services_list.waste_water', img: '/assets/Landing page/Waste Water Removal.jpeg' },
-		{ titleKey: 'home.services_list.office_deep', img: '/assets/Landing page/Office Deep Cleaning.jpeg' },
-		{ titleKey: 'home.services_list.technical', img: '/assets/Landing page/Technical Cleaning.jpeg' },
-		{ titleKey: 'home.services_list.sewage_tank', img: '/assets/Landing page/Sewage Tank Cleaning.jpeg' },
-		{ titleKey: 'home.services_list.grease_trap', img: '/assets/Landing page/Grease Trap Cleaning.jpeg' },
-		{ titleKey: 'home.services_list.sewage_water', img: '/assets/Landing page/Sewage Water Removal.jpeg' },
-		{ titleKey: 'home.services_list.deep_cleaning', img: '/assets/Landing page/Deep Cleaning.jpeg' },
-		{ titleKey: 'home.services_list.drainage', img: '/assets/Landing page/Drainage Cleaning.jpeg' },
-		{ titleKey: 'home.services_list.painting', img: '/assets/Landing page/Painting.jpeg' }
+		{ serviceId: 'waste_water', titleKey: 'home.services_list.waste_water', img: '/assets/Landing page/Waste Water Removal.jpeg' },
+		{ serviceId: 'office_deep', titleKey: 'home.services_list.office_deep', img: '/assets/Landing page/Office Deep Cleaning.jpeg' },
+		{ serviceId: 'technical', titleKey: 'home.services_list.technical', img: '/assets/Landing page/Technical Cleaning.jpeg' },
+		{ serviceId: 'sewage_tank', titleKey: 'home.services_list.sewage_tank', img: '/assets/Landing page/Sewage Tank Cleaning.jpeg' },
+		{ serviceId: 'grease_trap', titleKey: 'home.services_list.grease_trap', img: '/assets/Landing page/Grease Trap Cleaning.jpeg' },
+		{ serviceId: 'sewage_water', titleKey: 'home.services_list.sewage_water', img: '/assets/Landing page/Sewage Water Removal.jpeg' },
+		{ serviceId: 'deep_cleaning', titleKey: 'home.services_list.deep_cleaning', img: '/assets/Landing page/Deep Cleaning.jpeg' },
+		{ serviceId: 'drainage', titleKey: 'home.services_list.drainage', img: '/assets/Landing page/Drainage Cleaning.jpeg' },
+		{ serviceId: 'painting', titleKey: 'home.services_list.painting', img: '/assets/Landing page/Painting.jpeg' }
 	];
 
 	const testimonials = [
@@ -236,7 +236,7 @@
 
 						<!-- Hover Button -->
 						<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-							<a href="/quote" class="bg-[#E8F5E9] text-[#1B5E20] px-4 py-2 rounded-lg font-bold text-sm shadow-sm hover:bg-white transition-colors">
+							<a href={`/quote?service=${service.serviceId}`} class="bg-[#E8F5E9] text-[#1B5E20] px-4 py-2 rounded-lg font-bold text-sm shadow-sm hover:bg-white transition-colors">
 								{$_('home.quote_form.submit')}
 							</a>
 						</div>
