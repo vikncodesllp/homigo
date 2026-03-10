@@ -308,6 +308,9 @@
 			</div>
 			<div class="flex justify-between items-end w-full mt-0">
 				<img src="/assets/Footer Illustration.svg" alt="Footer Illustration" />
+				<a href="https://vikncodes.com" target="_blank" rel="noopener noreferrer" style="display: flex; width: 184.039px; min-height: 26.737px; flex-direction: column; justify-content: center; padding: 8px 12px; color: color(display-p3 1 1 1); font-family: Satoshi; font-size: 18px; font-style: normal; font-weight: 400; line-height: 132.2%;">
+					Designed by vikncodes
+				</a>
 			</div>
 		</div>
 	</footer>
