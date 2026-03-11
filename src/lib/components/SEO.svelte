@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	
 	let { 
 		title = 'Homigo - Top Rated Technical & Cleaning Services in Dubai',
@@ -9,7 +9,7 @@
 	} = $props();
 
 	const siteUrl = 'https://homigotechnicalservices.com';
-	let currentUrl = $derived(`${siteUrl}${$page.url.pathname}`);
+	let currentUrl = $derived(`${siteUrl}${page.url.pathname}`);
 </script>
 
 <svelte:head>
