@@ -71,7 +71,7 @@
 		const formData = new FormData(form);
 		const object = Object.fromEntries(formData);
 		// Replace with your Web3Forms Access Key
-		object.access_key = 'YOUR_ACCESS_KEY_HERE'; 
+		object.access_key = 'ceedc019-66b3-4147-910a-1ea539866406'; 
 
 		const json = JSON.stringify(object);
 
