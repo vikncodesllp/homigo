@@ -50,18 +50,16 @@
 		<div class="flex flex-col gap-12 lg:flex-row lg:items-start lg:justify-between">
 			
 			<!-- Contact Details -->
-			<div class="flex flex-col gap-10 lg:w-1/3">
+			<div class="flex flex-col gap-10 lg:w-3/4">
 				<!-- Phone -->
 				<div class="flex items-start gap-6">
 					<div class="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#15562E]">
-						<svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-						</svg>
+						<img src="/assets/Contact Us/call.svg" alt="Phone" class="h-7 w-7" />
 					</div>
 					<div>
-						<h3 class="mb-2 text-xl font-bold text-gray-900">{$_('contact.details.phone_title')}</h3>
-						<p class="text-gray-600">+971 5030 71989</p>
-						<p class="text-gray-600">+971 5030 71986</p>
+						<h3 class="mb-2 font-['Poppins'] font-semibold text-[26px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.phone_title')}</h3>
+						<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#1A1A1A] align-middle">+971 5030 71989</p>
+						<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#1A1A1A] align-middle mt-2">+971 5030 71986</p>
 					</div>
 				</div>
 
@@ -71,8 +69,8 @@
 						<img src="/assets/Contact Us/email.svg" alt="Email Icon" class="h-7 w-7" />
 					</div>
 					<div>
-						<h3 class="mb-2 text-xl font-bold text-gray-900">{$_('contact.details.email_title')}</h3>
-						<p class="text-gray-600">info@homigotechnicalservices.com</p>
+						<h3 class="mb-2 font-['Poppins'] font-semibold text-[26px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.email_title')}</h3>
+						<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#1A1A1A] align-middle break-all">info@homigotechnicalservices.com</p>
 					</div>
 				</div>
 
@@ -85,8 +83,8 @@
 						</svg>
 					</div>
 					<div>
-						<h3 class="mb-2 text-xl font-bold text-gray-900">{$_('contact.details.address_title')}</h3>
-						<p class="text-gray-600 max-w-xs">{$_('contact.details.address_val')}</p>
+						<h3 class="mb-2 font-['Poppins'] font-semibold text-[26px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.address_title')}</h3>
+						<p class="max-w-xs font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.address_val')}</p>
 					</div>
 				</div>
 
@@ -98,8 +96,8 @@
 						</svg>
 					</div>
 					<div>
-						<h3 class="mb-2 text-xl font-bold text-gray-900">{$_('contact.details.hours_title')}</h3>
-						<p class="text-gray-600">{$_('contact.details.hours_val')}</p>
+						<h3 class="mb-2 font-['Poppins'] font-semibold text-[26px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.hours_title')}</h3>
+						<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.hours_val')}</p>
 					</div>
 				</div>
 			</div>

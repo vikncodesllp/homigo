@@ -17,6 +17,13 @@
 		"contact": "Contact",
 		"rights": "Homigo. All rights reserved.",
 		"links": {
+			"wastewater_removal": "Wastewater Removal",
+			"grease_trap_cleaning": "Grease Trap Cleaning",
+			"drainage_cleaning": "Drainage Cleaning",
+			"water_tank_cleaning": "Water Tank Cleaning",
+			"technical_maintenance": "Technical Maintenance",
+			"painting_services": "Painting Services",
+			"civil_works_maintenance": "Civil Works Maintenance",
 			"deep_cleaning": "Deep Cleaning Services",
 			"office_cleaning": "Office Deep Cleaning",
 			"technical": "Technical Services",
@@ -26,14 +33,14 @@
 	},
 	"home": {
 		"hero": {
-			"title_1": "Trusted Professional",
-			"title_2": "Cleaning Services in Dubai",
-			"subtitle": "Bring Back the Fresh Look of Your Business or Home with Homigo Cleaning Company",
+			"title_1": "Trusted Wastewater& Sewage",
+			"title_2": "Solutions Since 2003",
+			"subtitle": "Committed to reliability, efficiency, and maintaining the highest standards of environmental responsibility.",
 			"cta": "Get a Free Quote"
 		},
 		"intro": {
-			"title": "Top Rated Technical & Cleaning Services",
-			"description": "Since 2003, we deliver professional cleaning and technical services in Dubai. Our trusted team specializes in deep cleaning, water tank cleaning, drainage cleaning, and maintenance for villas, apartments, and offices. Affordable pricing, fast service, and guaranteed satisfaction across Dubai."
+			"title": "Professional Wastewater & Technical Service Solutions",
+			"description": "Homigo Technical Services provides reliable wastewater management and technical service solutions across Dubai. Our experienced team supports residential, commercial, and industrial clients with professional equipment and efficient operations designed to maintain safe, clean, and well-maintained environments.<br/><br/>With a strong focus on reliability, safety, and environmental responsibility, we are committed to delivering dependable services and long-term customer satisfaction."
 		},
 		"quote_form": {
 			"title": "Get a Fast Quote",
@@ -51,8 +58,8 @@
 			"submit": "Get a Fast Quote"
 		},
 		"services_section": {
-			"title": "We're Glad You're Here!",
-			"subtitle": "Many cleaning needs, one solution.",
+			"title": "Your Trusted Partner for Reliable Solutions that Keep Dubai Clean, Safe, and Flowing",
+			"subtitle": "Your Trusted Partner for Reliable Solutions that Keep Dubai Clean, Safe, and Flowing",
 			"view_menu": "View Menu"
 		},
 		"process": {
@@ -75,22 +82,22 @@
 		"features": {
 			"title": "What Makes Homigo Different",
 			"quality": {
-				"title": "Quality Cleaning",
-				"desc": "Our Dubai deep cleaning service follows strict quality standards, using eco-friendly products and expert techniques to deliver safe, detailed, and reliable cleaning for residential and commercial spaces. We provide professional deep cleaning in Dubai with experienced staff, modern tools, and quality checks to ensure every corner is thoroughly cleaned and sanitized."
+				"title": "Trusted, Professional, & Environmentally Responsible",
+				"desc": "Homigo Technical Services is a leading provider of wastewater and technical solutions in Dubai. Our skilled team delivers reliable sewage, drainage, and technical services using advanced equipment, ensuring safe transport and disposal at government-approved facilities while maintaining high safety and environmental standards."
 			},
 			"flexible": {
-				"title": "Flexible Scheduling",
-				"desc": "Our flexible scheduling lets you book professional cleaning services at times that suit you best, ensuring seamless service delivery without interrupting your home or workday."
+				"title": "Flexible 24/7 Scheduling",
+				"desc": "Homigo Technical Services operates day and night to ensure wastewater and sewage services are completed efficiently, without disrupting your operations, while preventing overflows, blockages, and odors. Reliable, stress-free service whenever you need it."
 			},
 			"technology": {
-				"title": "Technology Backed",
+				"title": "Technology-Backed Operations",
 				"desc": "Our cleaning services are fully technology-backed, combining advanced equipment, smart systems, and modern processes to deliver consistent, high-quality results. From digital scheduling and real-time service tracking to professional-grade machinery and eco-friendly technology, we ensure efficient, reliable, and hygienic cleaning every time."
 			},
 			"insured": {
 				"title": "Insured Professionals",
-				"desc": "Our insured professionals deliver reliable, safe, and worry-free cleaning services giving you complete peace of mind while maintaining high standards of quality and professionalism."
+				"desc": "Our insured professionals deliver reliable, safe, and worry-free cleaning services, giving you complete peace of mind while ensuring high standards of quality and professionalism."
 			},
-			"cta": "Get a Free Quote"
+			"cta": "Get a fast Quote"
 		},
 		"testimonials": {
 			"title": "Why Our Clients <span class=\"relative inline-block\">Trust<svg class=\"absolute -bottom-2 left-0 w-full\" viewBox=\"0 0 162 30\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M3.00012 26.4279C24.3185 9.76105 94.6324 -6.76008 158.819 9.98415\" stroke=\"#AE0303\" stroke-width=\"6\" stroke-linecap=\"round\"/></svg></span> Homigo"
@@ -98,41 +105,41 @@
 		"testimonials_items": {
 			"item1": {
 				"name": "Allen",
-				"text": "Excellent service. Booking with Homigo was smooth and efficient. The crew arrived on time and did a fantastic job. Highly recommended!",
+				"text": "We booked a sofa cleaning with Homigo and were very happy. The team arrived on time, worked quickly and carefully, and our sofa looks perfect. The cleaners were polite and professional. Highly recommended!",
 				"date": "2 months ago"
 			},
 			"item2": {
 				"name": "Sarah Mohammed",
-				"text": "Very professional team. They did a deep clean of my villa and the results were amazing. Every corner was spotless.",
+				"text": "We are extremely satisfied with the wastewater cleaning services in Dubai, as their professional team ensures our drainage systems remain clean, odor-free, and fully compliant with regulations, significantly reducing blockages and improving overall hygiene for smoother and more efficient operations.",
 				"date": "1 month ago"
 			},
 			"item3": {
 				"name": "Zara",
-				"text": "Best cleaning service in Dubai. Reliable, affordable, and trustworthy staff. Will definitely use them again.",
+				"text": "I’ve been using Homigo for the past 5 years, and their service has always been professional and on time. They offer early morning slots, so the sofa dries well by the end of the day. The work is neat and clean, pricing is reasonable, and Juvy was very helpful and responsive with booking, even outside business hours.",
 				"date": "1 week ago"
 			}
 		},
 		"faq": {
 			"title": "Have Questions? Ask Away.",
 			"desc": "Here are some common questions from our customers. Need more help? Contact our customer service team via phone for fast response.",
-			"cta": "Get a Free Quote"
+			"cta": "Get a fast Quote"
 		},
 		"faq_items": {
 			"q1": {
-				"question": "How can I book a cleaning or technical service in Dubai?",
-				"answer": "You can easily book through our website form, call us directly, or send us a WhatsApp message. We offer flexible scheduling to suit your needs."
+				"question": "What areas do you serve in Dubai?",
+				"answer": "We provide professional wastewater, sewage, drainage, and technical services across all residential, commercial, and industrial areas in Dubai."
 			},
 			"q2": {
-				"question": "Do I need to provide deep cleaning tools and supplies?",
-				"answer": "No, our professional team comes fully equipped with all necessary tools and eco-friendly cleaning supplies."
+				"question": "How do you ensure safe and environmentally responsible disposal?",
+				"answer": "All wastewater and sewage are collected, transported, and disposed of at government-approved facilities, fully complying with UAE environmental regulations to protect both the community and the environment."
 			},
 			"q3": {
-				"question": "Can I trust professional cleaners in my home or office?",
-				"answer": "Absolutely. All our staff are background-checked, trained, and insured professionals."
+				"question": "Do you operate outside normal business hours?",
+				"answer": "Yes! We offer 24/7 flexible scheduling, including night-time operations, to prevent disruption, avoid overflows, and ensure your tanks and drainage systems are always functioning properly."
 			},
 			"q4": {
-				"question": "Do your cleaners know how to use tools in Dubai?",
-				"answer": "Yes, our team is trained in handling all modern cleaning equipment and techniques specifically for Dubai homes and offices."
+				"question": "What kind of equipment and techniques do you use?",
+				"answer": "Our team uses high-capacity tanker lorries, advanced suction machines, and modern operational systems to deliver efficient, safe, and reliable wastewater and technical solutions every time."
 			},
 			"q5": {
 				"question": "What if I'm not satisfied with the cleaning service?",
@@ -140,15 +147,17 @@
 			}
 		},
 		"services_list": {
-			"waste_water": "Waste Water Removal",
+			"waste_water": "Wastewater Removal",
 			"office_deep": "Office Deep Cleaning",
-			"technical": "Technical Services",
+			"technical": "Technical Maintenance",
 			"sewage_tank": "Sewage Tank Cleaning",
-			"grease_trap": "Grease Trap Cleaning Services",
+			"grease_trap": "Grease Trap Cleaning",
 			"sewage_water": "Sewage Water Removal",
-			"deep_cleaning": "Deep Cleaning Services in Dubai",
-			"drainage": "Drainage Cleaning Services",
-			"painting": "Painting Services"
+			"deep_cleaning": "Deep Cleaning Service in Dubai(UAE)",
+			"drainage": "Drainage Cleaning",
+			"water_tank": "Water Tank Cleaning",
+			"painting": "Painting Services",
+			"civil_works": "Civil Works Maintenance"
 		}
 	},
 	"about": {
@@ -159,20 +168,19 @@
 		},
 		"hello": {
 			"title": "Hello!",
-			"desc": "Homigo Cleaning and Technical Services provides professional deep cleaning and technical services in Dubai and across the UAE. Our trained and insured team uses advanced equipment and eco-friendly products to deliver safe, reliable results for homes and businesses, with flexible scheduling and a strong focus on customer satisfaction."
+			"desc": "We are committed to excellence, reliability, and environmental responsibility. Our team combines experience, professional expertise, and modern equipment to deliver safe, efficient, and dependable solutions for homes, businesses, and industrial clients. With 24/7 service and flexible scheduling, we ensure every project runs smoothly and meets the highest standards."
 		},
 		"mission": {
-			"title": "Mission",
-			"desc": "Deliver reliable, eco-friendly cleaning and technical services ensuring hygienic spaces, quality workmanship, and complete customer satisfaction."
+			"title": "Our Mission",
+			"desc": "To provide reliable, safe, and environmentally responsible wastewater, sewage, drainage, and technical solutions, ensuring efficient operations, customer satisfaction, and compliance with all regulatory standards."
 		},
 		"vision": {
-			"title": "Vision",
-			"desc": "To become the most trusted cleaning and technical services brand in Dubai, setting standards for quality and reliability."
+			"title": "Our Vision",
+			"desc": "To be Dubai’s most trusted provider of wastewater management and technical services, setting the benchmark for professionalism, safety, and environmental responsibility in the industry."
 		},
 		"cta": {
-			"title_part1": "Experience the Benefits of a",
-			"title_trusted": "Trusted",
-			"title_part2": "Cleaning & Technical Services",
+			"title": "Experience the Benefits of a Trusted Wastewater & Technical Service Partner",
+			"desc": "Reliable, safe, and environmentally responsible solutions for wastewater, sewage, drainage, and technical maintenance across Dubai.",
 			"button": "Get a fast Quote"
 		}
 	},
@@ -221,7 +229,7 @@
 			"title": "Featured Article",
 			"article": {
 				"title": "Sewage Water Cleaning in Dubai: Importance and Benefits",
-				"excerpt": "Sewage water cleaning in Dubai is essential for maintaining hygiene, protecting public health, and ensuring proper wastewater management. With rapid urban development and high population density, residential and commercial properties generate large amounts of wastewater daily.",
+				"excerpt": "Sewage water cleaning in Dubai is essential for maintaining hygiene, protecting public health, and ensuring proper wastewater management.With rapid urban development and high population density, residential and commercial properties generate large amounts of wastewater daily.",
 				"read_btn": "Read"
 			}
 		},

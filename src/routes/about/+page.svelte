@@ -16,7 +16,7 @@
 	description="Learn about Homigo Technical Services, Dubai's trusted partner for professional cleaning, maintenance, and facility management services."
 />
 
-<div class="bg-gray-50 font-['SF_Pro']">
+<div class="bg-gray-50 font-['Poppins']">
 	<!-- Hero Section -->
 	<section class="relative flex min-h-150 w-full items-center overflow-hidden bg-[#A6D5E4]">
 		<img
@@ -30,13 +30,13 @@
 		>
 			<!-- Left Content -->
 			<div class="flex w-full flex-col justify-center md:w-1/2">
-				<nav class="mb-4 flex items-center gap-2 text-sm font-medium tracking-wide" aria-label="Breadcrumb">
+				<nav class="mb-4 flex items-center gap-2 font-['Poppins'] font-normal text-[20px] leading-[110%] text-[#020202] tracking-wide" aria-label="Breadcrumb">
 					<a href="/" class="hover:underline">{$_('nav.home')}</a>
 					<span>/</span>
 					<span aria-current="page">{$_('about.hero.title')}</span>
 				</nav>
-				<h1 class="mb-6 text-6xl font-black tracking-tight text-black">{$_('about.hero.title')}</h1>
-				<p class="max-w-lg text-xl leading-relaxed font-medium text-gray-800">
+				<h1 class="mb-6 font-['Poppins'] font-bold text-[60px] leading-relaxed text-[#000000] tracking-tight align-middle">{$_('about.hero.title')}</h1>
+				<p class="max-w-lg font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle">
 					{$_('about.hero.desc')}
 				</p>
 			</div>
@@ -47,8 +47,8 @@
 	<section class="container mx-auto px-4 py-20">
 		<div class="flex flex-col gap-12 lg:flex-row lg:items-center">
 			<div class="lg:w-1/2">
-				<h2 class="mb-8 text-4xl font-bold text-black">{$_('about.hello.title')}</h2>
-				<p class="text-lg leading-relaxed text-gray-700">
+				<h2 class="mb-8 font-['PF_Bague_Sans_Pro'] font-black text-[50px] leading-none text-[#0C0C0C] align-middle">{$_('about.hello.title')}</h2>
+				<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle">
 					{$_('about.hello.desc')}
 				</p>
 			</div>
@@ -78,8 +78,8 @@
 				<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full">
 					<img src={missionIcon} alt="Mission Icon" />
 				</div>
-				<h3 class="mb-4 text-2xl font-bold text-black">{$_('about.mission.title')}</h3>
-				<p class="leading-relaxed text-gray-600">
+				<h3 class="mb-4 font-['Poppins'] font-bold text-[32px] leading-relaxed text-[#000000] align-middle">{$_('about.mission.title')}</h3>
+				<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle">
 					{$_('about.mission.desc')}
 				</p>
 			</div>
@@ -91,11 +91,10 @@
 				<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full">
 					<img src={visionIcon} alt="Vision Icon" />
 				</div>
-				<h3 class="mb-4 text-2xl font-bold text-black">{$_('about.vision.title')}</h3>
-				<p class="leading-relaxed text-gray-600">
+				<h3 class="mb-4 font-['Poppins'] font-bold text-[32px] leading-relaxed text-[#000000] align-middle">{$_('about.vision.title')}</h3>
+				<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle">
 					{$_('about.vision.desc')}
 				</p>
-			</div>
 		</div>
 	</section>
 
@@ -104,20 +103,14 @@
 		<div
 			class="container mx-auto flex flex-col items-center justify-between gap-8 px-4 md:flex-row"
 		>
-			<h2 class="max-w-xl text-3xl leading-tight font-bold text-black">
-				{$_('about.cta.title_part1')}
-				<span class="relative inline-block">
-					{$_('about.cta.title_trusted')}
-					<svg
-						class="absolute -bottom-2 left-0 h-3 w-full text-red-500 transform rotate-180"
-						viewBox="0 0 100 10"
-						preserveAspectRatio="none"
-					>
-						<path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="none" />
-					</svg>
-				</span>
-				<br />{$_('about.cta.title_part2')}
-			</h2>
+			<div class="max-w-3xl">
+				<h2 class="mb-4 font-['Poppins'] font-bold text-[40px] leading-relaxed text-[#0C0C0C] align-middle">
+					{$_('about.cta.title')}
+				</h2>
+				<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#0C0C0C] align-middle">
+					{$_('about.cta.desc')}
+				</p>
+			</div>
 			<a
 				href="/quote"
 				class="rounded-md bg-[#15562E] px-8 py-3 font-medium text-white transition-colors hover:bg-[#0f4223]"

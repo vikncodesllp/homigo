@@ -113,15 +113,14 @@
 								bind:value={selectedService}
 								class="w-full bg-gray-50 border-none rounded-lg px-4 py-3.5 appearance-none focus:ring-2 focus:ring-[#15562E] focus:outline-none transition-all text-gray-700"
 							>
-								<option value="waste_water">{optionLabel('home.services_list.waste_water')}</option>
-								<option value="office_deep">{optionLabel('home.services_list.office_deep')}</option>
-								<option value="technical">{optionLabel('home.services_list.technical')}</option>
-								<option value="sewage_tank">{optionLabel('home.services_list.sewage_tank')}</option>
-								<option value="grease_trap">{optionLabel('home.services_list.grease_trap')}</option>
-								<option value="sewage_water">{optionLabel('home.services_list.sewage_water')}</option>
-								<option value="deep_cleaning">{optionLabel('home.services_list.deep_cleaning')}</option>
-								<option value="drainage">{optionLabel('home.services_list.drainage')}</option>
-								<option value="painting">{optionLabel('home.services_list.painting')}</option>
+								<option>{optionLabel('home.services_list.waste_water')}</option>
+								<option>{optionLabel('home.services_list.sewage_tank')}</option>
+								<option>{optionLabel('home.services_list.grease_trap')}</option>
+								<option>{optionLabel('home.services_list.drainage')}</option>
+								<option>{optionLabel('home.services_list.water_tank')}</option>
+								<option>{optionLabel('home.services_list.technical')}</option>
+								<option>{optionLabel('home.services_list.painting')}</option>
+								<option>{optionLabel('home.services_list.civil_works')}</option>
 							</select>
 							<div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none">
 								<svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

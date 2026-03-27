@@ -11,14 +11,14 @@
 	// Service Images Mapping
 	const services = [
 		{ serviceId: 'waste_water', titleKey: 'home.services_list.waste_water', img: '/assets/Landing page/Waste Water Removal.jpeg' },
-		{ serviceId: 'office_deep', titleKey: 'home.services_list.office_deep', img: '/assets/Landing page/Office Deep Cleaning.jpeg' },
-		{ serviceId: 'technical', titleKey: 'home.services_list.technical', img: '/assets/Landing page/Technical Cleaning.jpeg' },
-		{ serviceId: 'sewage_tank', titleKey: 'home.services_list.sewage_tank', img: '/assets/Landing page/Sewage Tank Cleaning.jpeg' },
 		{ serviceId: 'grease_trap', titleKey: 'home.services_list.grease_trap', img: '/assets/Landing page/Grease Trap Cleaning.jpeg' },
-		{ serviceId: 'sewage_water', titleKey: 'home.services_list.sewage_water', img: '/assets/Landing page/Sewage Water Removal.jpeg' },
+		{ serviceId: 'sewage_tank', titleKey: 'home.services_list.sewage_tank', img: '/assets/Landing page/Sewage Tank Cleaning.jpeg' },
+		{ serviceId: 'sewage_water', titleKey: 'home.services_list.sewage_water', img: '/assets/Landing page/SewageWaterRemoval.jpg' },
+		{ serviceId: 'technical', titleKey: 'home.services_list.technical', img: '/assets/Landing page/Technical Cleaning.jpeg' },
+		{ serviceId: 'painting', titleKey: 'home.services_list.painting', img: '/assets/Landing page/Painting.jpeg' },
+		{ serviceId: 'drainage', titleKey: 'home.services_list.drainage', img: '/assets/Landing page/DrainageCleaningService.jpg' },
+		{ serviceId: 'office_deep', titleKey: 'home.services_list.office_deep', img: '/assets/Landing page/Office Deep Cleaning.jpeg' },
 		{ serviceId: 'deep_cleaning', titleKey: 'home.services_list.deep_cleaning', img: '/assets/Landing page/Deep Cleaning.jpeg' },
-		{ serviceId: 'drainage', titleKey: 'home.services_list.drainage', img: '/assets/Landing page/Drainage Cleaning.jpeg' },
-		{ serviceId: 'painting', titleKey: 'home.services_list.painting', img: '/assets/Landing page/Painting.jpeg' }
 	];
 
 	const testimonials = [
@@ -47,7 +47,7 @@
 		{ questionKey: 'home.faq_items.q2.question', answerKey: 'home.faq_items.q2.answer' },
 		{ questionKey: 'home.faq_items.q3.question', answerKey: 'home.faq_items.q3.answer' },
 		{ questionKey: 'home.faq_items.q4.question', answerKey: 'home.faq_items.q4.answer' },
-		{ questionKey: 'home.faq_items.q5.question', answerKey: 'home.faq_items.q5.answer' }
+		// { questionKey: 'home.faq_items.q5.question', answerKey: 'home.faq_items.q5.answer' }
 	];
 
 	let activeFaq = 0;
@@ -115,15 +115,15 @@
 			<!-- Hero Text -->
 			<div class="text-white w-full text-center flex flex-col items-center">
 				{#if isMounted}
-				<div class="flex flex-col justify-center items-center w-full max-w-224.75 h-auto md:h-48 mb-6">
-					<h1 class="text-[#FFFFFF] text-center font-['PF_Bague_Sans_Pro'] text-4xl md:text-[77.222px] font-normal leading-[1.1] md:leading-[92.145%]">
-						{$_('home.hero.title_1')}<br/>
-						<span class="font-black md:text-[74.973px] md:leading-[86.615%] block mt-2">{$_('home.hero.title_2')}</span>
+				<div class="flex flex-col justify-center items-center w-full max-w-250.5 h-auto md:h-48 mb-6">
+					<h1 class="text-[#FFFFFF] text-center font-['Poppins'] text-[60px] font-black leading-relaxed">
+						{$_('home.hero.title_1')}<br />
+						<span class="block">{$_('home.hero.title_2')}</span>
 					</h1>
 				</div>
 
 				<div class="flex flex-col justify-center items-center w-full max-w-192.25 mb-8">
-					<p class="text-[#FFFFFF] text-center text-lg md:text-[26px] font-medium leading-[110%] font-['Satoshi']">
+					<p class="text-[#FFFFFF] text-center text-[24px] font-normal leading-relaxed font-['Poppins']">
 						{$_('home.hero.subtitle')}
 					</p>
 				</div>
@@ -144,14 +144,13 @@
 	<section class="py-16 md:py-24">
 		<div class="container mx-auto px-4 flex flex-col md:flex-row gap-12 items-start relative">
 			<div class="md:w-1/2 pt-12">
-				<h2 class="text-3xl md:text-[60px] font-bold text-gray-900 mb-6 font-['PF_Bague_Sans_Pro'] leading-tight md:leading-normal" style="color: color(display-p3 0.0481 0.0481 0.0481);">
-					<!-- Using a generic key for "Top Rated Technical & Cleaning Services" but splitting it might be tricky with BR. Let's use the full string or split keys. The JSON has 'title'. -->
+				<h2 class="text-3xl md:text-[40px] font-black mb-6 font-['Poppins'] leading-relaxed text-[#0C0C0C]">
 					{@html $_('home.intro.title').replace('&', '&<br/>')}
 				</h2>
 				<!-- Note: The BR was hardcoded. The JSON string doesn't have BR. I can use {@html} or just CSS. For now let's assume the JSON title is single line or handles it. The design had a BR. I will rely on CSS width or just let it wrap. Or I can inject BR. -->
 				
-				<p class="text-lg md:text-[32px] text-gray-600 mb-6 leading-relaxed font-['PF_Bague_Sans_Pro']" style="color: color(display-p3 0 0 0);">
-					{$_('home.intro.description')}
+				<p class="text-lg md:text-[24px] text-[#000000] mb-6 font-['Poppins'] font-normal leading-relaxed">
+					{@html $_('home.intro.description')}
 				</p>
 			</div>
 			
@@ -182,14 +181,13 @@
 						<div class="relative">
 							<select id="service" name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 border-none focus:ring-2 focus:ring-homigo-green/20 outline-none transition-all appearance-none text-gray-600">
 								<option>{optionLabel('home.services_list.waste_water')}</option>
-								<option>{optionLabel('home.services_list.office_deep')}</option>
-								<option>{optionLabel('home.services_list.technical')}</option>
 								<option>{optionLabel('home.services_list.sewage_tank')}</option>
 								<option>{optionLabel('home.services_list.grease_trap')}</option>
-								<option>{optionLabel('home.services_list.sewage_water')}</option>
-								<option>{optionLabel('home.services_list.deep_cleaning')}</option>
 								<option>{optionLabel('home.services_list.drainage')}</option>
+								<option>{optionLabel('home.services_list.water_tank')}</option>
+								<option>{optionLabel('home.services_list.technical')}</option>
 								<option>{optionLabel('home.services_list.painting')}</option>
+								<option>{optionLabel('home.services_list.civil_works')}</option>
 							</select>
 							<div class="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
 								<svg class="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -215,8 +213,8 @@
 		<div class="container mx-auto px-4">
 			<div class="flex justify-between items-end mb-12">
 				<div>
-					<h2 class="text-4xl font-bold text-gray-900 mb-2">{$_('home.services_section.title')}</h2>
-					<p class="text-gray-500">{$_('home.services_section.subtitle')}</p>
+					<h2 class="md:text-[40px] font-black text-[#0C0C0C] mb-2 font-['Poppins'] leading-relaxed">{$_('home.services_section.title')}</h2>
+					<p class="md:text-[24px] font-normal text-[#6B6B6B] font-['Poppins'] leading-relaxed">{$_('home.services_section.subtitle')}</p>
 				</div>
 				<a href="/quote" class="bg-homigo-green hover:bg-homigo-dark text-white px-6 py-2 rounded-md text-sm font-semibold transition-colors">
 					{$_('nav.quote')}
@@ -242,7 +240,7 @@
 						</div>
 
 						<div class="absolute bottom-0 left-0 p-6 z-10">
-							<h3 class="text-white font-bold text-lg">{$_(service.titleKey)}</h3>
+							<h3 class="text-white font-['Poppins'] font-black text-[32px] leading-none">{$_(service.titleKey)}</h3>
 						</div>
 					</div>
 				{/each}
@@ -288,14 +286,14 @@
 	<!-- Features (What Makes Homigo Different) -->
 	<section class="bg-[#F0FCEF] py-20" style="background-color: color(display-p3 0.949 0.9882 0.9412);">
 		<div class="container mx-auto px-4">
-			<h2 class="text-3xl font-bold text-center text-gray-900 mb-16">{$_('home.features.title')}</h2>
+			<h2 class="md:text-[40px] font-black text-center text-[#0C0C0C] mb-16 font-['Poppins'] leading-relaxed">{$_('home.features.title')}</h2>
 
 			<div class="space-y-24">
 				<!-- Feature 1 -->
 				<div class="flex flex-col md:flex-row items-center gap-12">
 					<div class="md:w-1/2">
-						<h3 class="text-homigo-green font-bold text-xl mb-4">{$_('home.features.quality.title')}</h3>
-						<p class="text-gray-600 leading-relaxed">
+						<h3 class="md:text-[34px] font-bold text-[#0C0C0C] mb-4 font-['Poppins'] leading-relaxed">{$_('home.features.quality.title')}</h3>
+						<p class="md:text-[24px] text-[#000000] font-['Poppins'] font-normal leading-relaxed">
 							{$_('home.features.quality.desc')}
 						</p>
 					</div>
@@ -303,16 +301,16 @@
 						<div class="relative w-full max-w-md">
 							<!-- Main Image -->
 							<img 
-								src="/assets/Landing page/portrait-modern-man-gggdvgd_compressed.jpeg" 
-								alt="Quality Cleaning Service" 
-								class="w-[85%] rounded-4xl shadow-lg object-cover aspect-4/3 relative z-10" 
+								src="/assets/Landing page/woman-cleaning-couch-with-vacuum-vdvdv_compressed.jpeg" 
+								alt="Deep Cleaning Detail" 
+								class="w-[85%] mr-auto rounded-4xl shadow-lg object-cover aspect-4/3 relative z-10" 
 							/>
 							
 							<!-- Secondary Image (Overlapping) -->
 							<img 
-								src="/assets/Landing page/woman-cleaning-couch-with-vacuum-vdvdv_compressed.jpeg" 
-								alt="Deep Cleaning Detail" 
-								class="absolute -bottom-8 right-0 w-[55%] rounded-4xl shadow-xl object-cover aspect-4/3 z-20 border-4 border-[#F0FCEF]" 
+								src="/assets/Landing page/portrait-modern-man-gggdvgd_compressed.jpeg" 
+								alt="Quality Cleaning Service" 
+								class="absolute -bottom-8 -right-4 w-[55%] rounded-4xl shadow-xl object-cover aspect-4/3 z-20 border-8 border-[#F0FCEF]" 
 							/>
 						</div>
 					</div>
@@ -321,8 +319,8 @@
 				<!-- Feature 2 -->
 				<div class="flex flex-col md:flex-row-reverse items-center gap-12">
 					<div class="md:w-1/2">
-						<h3 class="text-homigo-green font-bold text-xl mb-4">{$_('home.features.flexible.title')}</h3>
-						<p class="text-gray-600 leading-relaxed">
+						<h3 class="md:text-[34px] font-bold text-[#0C0C0C] mb-4 font-['Poppins'] leading-relaxed">{$_('home.features.flexible.title')}</h3>
+						<p class="md:text-[24px] text-[#000000] font-['Poppins'] font-normal leading-relaxed">
 							{$_('home.features.flexible.desc')}
 						</p>
 					</div>
@@ -420,8 +418,8 @@
 				<!-- Feature 3 -->
 				<div class="flex flex-col md:flex-row items-center gap-12">
 					<div class="md:w-1/2">
-						<h3 class="text-homigo-green font-bold text-xl mb-4">{$_('home.features.technology.title')}</h3>
-						<p class="text-gray-600 leading-relaxed">
+						<h3 class="md:text-[34px] font-bold text-[#0C0C0C] mb-4 font-['Poppins'] leading-relaxed">{$_('home.features.technology.title')}</h3>
+						<p class="md:text-[24px] text-[#000000] font-['Poppins'] font-normal leading-relaxed">
 							{$_('home.features.technology.desc')}
 						</p>
 					</div>
@@ -448,8 +446,8 @@
 				<!-- Feature 4 -->
 				<div class="flex flex-col md:flex-row-reverse items-center gap-12">
 					<div class="md:w-1/2">
-						<h3 class="text-homigo-green font-bold text-xl mb-4">{$_('home.features.insured.title')}</h3>
-						<p class="text-gray-600 leading-relaxed">
+						<h3 class="md:text-[34px] font-bold text-[#0C0C0C] mb-4 font-['Poppins'] leading-relaxed">{$_('home.features.insured.title')}</h3>
+						<p class="md:text-[24px] text-[#000000] font-['Poppins'] font-normal leading-relaxed">
 							{$_('home.features.insured.desc')}
 						</p>
 					</div>
@@ -473,7 +471,7 @@
 				</div>
 			</div>
 			
-			<div class="mt-16 text-center">
+			<div class="mt-24 text-center">
 				<a href="/quote" class="bg-homigo-green hover:bg-homigo-dark text-white px-8 py-3 rounded-md font-bold transition-colors">
 					{$_('home.features.cta')}
 				</a>
@@ -494,7 +492,7 @@
 									<svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
 								{/each}
 						</div>
-						<p class="text-gray-600 mb-6 text-sm leading-relaxed grow">{$_(testimonial.textKey)}</p>
+						<p class="text-[#474747] mb-6 text-[24px] leading-relaxed font-['Poppins'] font-normal grow">{$_(testimonial.textKey)}</p>
 						<div class="mb-4">
 							<img src="/assets/Testimonial/Google.svg" alt="Google" class="h-6" />
 						</div>
@@ -503,9 +501,9 @@
 								<img src={testimonial.img} alt={$_(testimonial.nameKey)} class="w-full h-full object-cover" />
 							</div>
 							<div>
-								<p class="font-bold text-sm text-gray-900">{$_(testimonial.nameKey)}</p>
+								<p class="text-[#0C0C0C] text-[24px] leading-none font-['Poppins'] font-medium">{$_(testimonial.nameKey)}</p>
 							</div>
-							<div class="ml-auto text-xs text-gray-400">
+							<div class="ml-auto text-[#777777] text-[20px] leading-none font-['Poppins'] font-normal">
 								{$_(testimonial.dateKey)}
 							</div>
 						</div>
@@ -519,9 +517,9 @@
 	<section class="py-20 bg-gray-50">
 		<div class="container mx-auto px-4 flex flex-col md:flex-row gap-12">
 			<div class="md:w-1/3">
-				<h2 class="text-3xl font-bold text-gray-900 mb-6">{@html $_('home.faq.title').replace('?', '?<br/>')}</h2>
+				<h2 class="md:text-[40px] font-black text-gray-900 mb-6 font-['Poppins'] leading-relaxed">{@html $_('home.faq.title').replace('?', '?<br/>')}</h2>
 				<!-- Hardcoding the replace for BR again if needed, or just let it flow. The original had <br/>. JSON title is "Have Questions? Ask Away.". I can split it or just display it. Let's try to match the break. -->
-				<p class="text-gray-600 mb-8">
+				<p class="text-[#474747] mb-8 text-[24px] leading-relaxed font-['Poppins'] font-normal">
 					{$_('home.faq.desc')}
 				</p>
 				<a href="/quote" class="bg-homigo-green hover:bg-homigo-dark text-white px-8 py-3 rounded-md font-bold transition-colors">
@@ -536,13 +534,13 @@
 								class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
 								onclick={() => toggleFaq(i)}
 							>
-								<span class="font-semibold text-gray-800">{$_(faq.questionKey)}</span>
+								<span class="font-['Poppins'] font-medium text-[30px] leading-relaxed text-[#000000] align-middle">{$_(faq.questionKey)}</span>
 								<svg class="w-5 h-5 text-gray-400 transform transition-transform duration-200 {activeFaq === i ? 'rotate-180' : ''}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 								</svg>
 							</button>
 							{#if activeFaq === i}
-								<div class="px-6 pb-4 text-gray-600 border-t border-gray-100 pt-4">
+								<div class="px-6 pb-4 font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle border-t border-gray-100 pt-4">
 									{$_(faq.answerKey)}
 								</div>
 							{/if}

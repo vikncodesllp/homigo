@@ -78,10 +78,10 @@
 					/>
 				</div>
 				<div class="flex flex-col justify-center py-4 md:w-1/2">
-					<h3 class="mb-4 text-2xl font-bold leading-tight text-gray-900">
+					<h3 class="mb-4 font-['Poppins'] font-black text-[30px] leading-relaxed text-[#0C0C0C] align-middle">
 						{$_('blog_page.featured.article.title')}
 					</h3>
-					<p class="mb-6 text-lg text-gray-600 leading-relaxed line-clamp-3">
+					<p class="mb-6 font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle">
 						{$_('blog_page.featured.article.excerpt')}
 					</p>
 					
@@ -125,12 +125,13 @@
 							/>
 						</div>
 						<div class="flex flex-1 flex-col px-2">
-							<h3 class="mb-3 text-xl font-bold leading-snug text-gray-900 group-hover:text-[#15562E] transition-colors">
+							<h3 class="mb-3 font-['Poppins'] font-bold text-[30px] leading-relaxed text-[#0C0C0C] align-middle group-hover:text-[#15562E] transition-colors">
 								{$_ (article.titleKey)}
 							</h3>
-							<p class="mb-6 text-sm text-gray-600 line-clamp-2">
-								{$_ (article.excerptKey)}
+							<p class="mb-6 font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle line-clamp-4">
+								{$_(article.excerptKey)}
 							</p>
+							
 							
 							<div class="mt-auto flex items-center justify-between border-t border-gray-100 pt-4">
 								<div class="flex items-center gap-4 text-xs text-gray-500">
