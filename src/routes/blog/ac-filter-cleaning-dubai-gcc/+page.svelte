@@ -6,7 +6,7 @@
 	const detailImage2 = '/assets/Blog/Another angle tool.jpeg'; // Another angle/tool
 </script>
 
-<div class="font-['SF_Pro'] bg-gray-50 pb-20 mt-40">
+<div class="font-sans bg-gray-50 pb-20 mt-40">
 	<div class="container mx-auto px-4 max-w-5xl">
 		<!-- Breadcrumb -->
 		<div class="py-8">

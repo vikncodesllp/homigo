@@ -76,7 +76,7 @@
 	description="Get a free, no-obligation quote for residential or commercial cleaning services in Dubai. Fast response guaranteed."
 />
 
-<div class="font-['SF_Pro'] bg-gray-50 min-h-screen pt-20 pb-20 mt-40">
+<div class="font-sans bg-gray-50 min-h-screen pt-20 pb-20 mt-40">
 	<div class="container mx-auto px-4 text-center mb-12">
 		<h1 class="text-4xl md:text-5xl font-bold text-black mb-4">{$_('quote_page.title')}</h1>
 		<p class="text-lg text-gray-600">{$_('quote_page.subtitle')}</p>

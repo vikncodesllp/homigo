@@ -38,7 +38,7 @@
 	description="Read the latest news, cleaning tips, and insights from Dubai's leading cleaning experts. Stay updated with Homigo."
 />
 
-<div class="font-['SF_Pro']">
+<div class="font-sans">
 	<!-- Hero Section -->
 	<section class="relative h-125 w-full overflow-hidden">
 		<!-- Background Image -->
@@ -58,7 +58,7 @@
 				<span>/</span>
 				<span aria-current="page">{$_('blog_page.hero.title')}</span>
 			</nav>
-			<h1 class="mb-4 text-6xl font-bold tracking-tight">{$_('blog_page.hero.title')}</h1>
+			<h1 class="mb-4 text-4xl md:text-6xl font-bold tracking-tight">{$_('blog_page.hero.title')}</h1>
 			<p class="max-w-xl px-4 text-lg font-medium text-gray-200">
 				{$_('blog_page.hero.desc')}
 			</p>
@@ -78,10 +78,10 @@
 					/>
 				</div>
 				<div class="flex flex-col justify-center py-4 md:w-1/2">
-					<h3 class="mb-4 font-['Poppins'] font-black text-[30px] leading-relaxed text-[#0C0C0C] align-middle">
+					<h3 class="mb-4 font-['Poppins'] font-black text-[22px] md:text-[30px] leading-relaxed text-[#0C0C0C] align-middle">
 						{$_('blog_page.featured.article.title')}
 					</h3>
-					<p class="mb-6 font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle">
+					<p class="mb-6 font-['Poppins'] font-normal text-[18px] md:text-[24px] leading-relaxed text-[#000000] align-middle">
 						{$_('blog_page.featured.article.excerpt')}
 					</p>
 					
@@ -125,10 +125,10 @@
 							/>
 						</div>
 						<div class="flex flex-1 flex-col px-2">
-							<h3 class="mb-3 font-['Poppins'] font-bold text-[30px] leading-relaxed text-[#0C0C0C] align-middle group-hover:text-[#15562E] transition-colors">
+							<h3 class="mb-3 font-['Poppins'] font-bold text-[22px] md:text-[30px] leading-relaxed text-[#0C0C0C] align-middle group-hover:text-[#15562E] transition-colors">
 								{$_ (article.titleKey)}
 							</h3>
-							<p class="mb-6 font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle line-clamp-4">
+							<p class="mb-6 font-['Poppins'] font-normal text-[18px] md:text-[24px] leading-relaxed text-[#000000] align-middle line-clamp-4">
 								{$_(article.excerptKey)}
 							</p>
 							

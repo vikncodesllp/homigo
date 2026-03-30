@@ -53,6 +53,7 @@
 	let activeFaq = 0;
 	let isSubmitting = false;
 	let submitStatus = '';
+	let activeServiceId: string | null = null;
 
 	function toggleFaq(index: number) {
 		activeFaq = activeFaq === index ? -1 : index;
@@ -60,6 +61,10 @@
 
 	function optionLabel(key: string) {
 		return $_(key);
+	}
+
+	function toggleService(serviceId: string) {
+		activeServiceId = activeServiceId === serviceId ? null : serviceId;
 	}
 
 	async function handleSubmit(e: Event) {
@@ -71,7 +76,8 @@
 		const formData = new FormData(form);
 		const object = Object.fromEntries(formData);
 		// Replace with your Web3Forms Access Key
-		object.access_key = 'ceedc019-66b3-4147-910a-1ea539866406'; 
+		object.access_key = 'ceedc019-66b3-4147-910a-1ea539866406';
+		// object.access_key = '04c825b0-7a50-4c54-b973-be480c4b7d55'; //FOR TESTING
 
 		const json = JSON.stringify(object);
 
@@ -115,15 +121,15 @@
 			<!-- Hero Text -->
 			<div class="text-white w-full text-center flex flex-col items-center">
 				{#if isMounted}
-				<div class="flex flex-col justify-center items-center w-full max-w-250.5 h-auto md:h-48 mb-6">
-					<h1 class="text-[#FFFFFF] text-center font-['Poppins'] text-[60px] font-black leading-relaxed">
+				<div class="flex flex-col justify-center items-center w-full max-w-250.5 mb-6">
+					<h1 class="text-[#FFFFFF] text-center font-['Poppins'] text-[36px] md:text-[60px] font-black leading-relaxed">
 						{$_('home.hero.title_1')}<br />
 						<span class="block">{$_('home.hero.title_2')}</span>
 					</h1>
 				</div>
 
 				<div class="flex flex-col justify-center items-center w-full max-w-192.25 mb-8">
-					<p class="text-[#FFFFFF] text-center text-[24px] font-normal leading-relaxed font-['Poppins']">
+					<p class="text-[#FFFFFF] text-center text-[18px] md:text-[24px] font-normal leading-relaxed font-['Poppins']">
 						{$_('home.hero.subtitle')}
 					</p>
 				</div>
@@ -223,24 +229,36 @@
 			
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
 				{#each services as service}
-					<div class="group relative overflow-hidden h-96 shadow-md cursor-pointer">
+					<div
+						class="group relative overflow-hidden h-96 shadow-md cursor-pointer"
+						role="button"
+						tabindex="0"
+						aria-pressed={activeServiceId === service.serviceId}
+						onclick={() => toggleService(service.serviceId)}
+						onkeydown={(e) => {
+							if (e.key === 'Enter' || e.key === ' ') {
+								e.preventDefault();
+								toggleService(service.serviceId);
+							}
+						}}
+					>
 						<img src={service.img} alt={$_('home.services_section.title')} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
 						
 						<!-- Default Gradient -->
-						<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 group-hover:opacity-0"></div>
+						<div class="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent transition-opacity duration-300 {activeServiceId === service.serviceId ? 'opacity-0' : 'opacity-100'} group-hover:opacity-0"></div>
 
 						<!-- Hover Overlay -->
-						<div class="absolute inset-0 bg-[#34A853]/85 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-[2px]"></div>
+						<div class="absolute inset-0 bg-[#34A853]/85 transition-opacity duration-300 backdrop-blur-[2px] {activeServiceId === service.serviceId ? 'opacity-100' : 'opacity-0'} group-hover:opacity-100"></div>
 
 						<!-- Hover Button -->
-						<div class="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-							<a href={`/quote?service=${service.serviceId}`} class="bg-[#E8F5E9] text-[#1B5E20] px-4 py-2 rounded-lg font-bold text-sm shadow-sm hover:bg-white transition-colors">
+						<div class="absolute top-4 right-4 transition-all duration-300 transform {activeServiceId === service.serviceId ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2'} group-hover:opacity-100 group-hover:translate-y-0">
+							<a onclick={(e) => e.stopPropagation()} href={`/quote?service=${service.serviceId}`} class="bg-[#E8F5E9] text-[#1B5E20] px-4 py-2 rounded-lg font-bold text-sm shadow-sm hover:bg-white transition-colors">
 								{$_('home.quote_form.submit')}
 							</a>
 						</div>
 
 						<div class="absolute bottom-0 left-0 p-6 z-10">
-							<h3 class="text-white font-['Poppins'] font-black text-[32px] leading-none">{$_(service.titleKey)}</h3>
+							<h3 class="text-white font-['Poppins'] font-black text-[24px] md:text-[32px] leading-none">{$_(service.titleKey)}</h3>
 						</div>
 					</div>
 				{/each}
@@ -492,7 +510,7 @@
 									<svg class="w-5 h-5 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
 								{/each}
 						</div>
-						<p class="text-[#474747] mb-6 text-[24px] leading-relaxed font-['Poppins'] font-normal grow">{$_(testimonial.textKey)}</p>
+						<p class="text-[#474747] mb-6 text-[18px] md:text-[24px] leading-relaxed font-['Poppins'] font-normal grow">{$_(testimonial.textKey)}</p>
 						<div class="mb-4">
 							<img src="/assets/Testimonial/Google.svg" alt="Google" class="h-6" />
 						</div>
@@ -501,9 +519,9 @@
 								<img src={testimonial.img} alt={$_(testimonial.nameKey)} class="w-full h-full object-cover" />
 							</div>
 							<div>
-								<p class="text-[#0C0C0C] text-[24px] leading-none font-['Poppins'] font-medium">{$_(testimonial.nameKey)}</p>
+								<p class="text-[#0C0C0C] text-[18px] md:text-[24px] leading-none font-['Poppins'] font-medium">{$_(testimonial.nameKey)}</p>
 							</div>
-							<div class="ml-auto text-[#777777] text-[20px] leading-none font-['Poppins'] font-normal">
+							<div class="ml-auto text-[#777777] text-[16px] md:text-[20px] leading-none font-['Poppins'] font-normal">
 								{$_(testimonial.dateKey)}
 							</div>
 						</div>
@@ -534,13 +552,13 @@
 								class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none"
 								onclick={() => toggleFaq(i)}
 							>
-								<span class="font-['Poppins'] font-medium text-[30px] leading-relaxed text-[#000000] align-middle">{$_(faq.questionKey)}</span>
+								<span class="font-['Poppins'] font-medium text-[20px] md:text-[30px] leading-relaxed text-[#000000] align-middle">{$_(faq.questionKey)}</span>
 								<svg class="w-5 h-5 text-gray-400 transform transition-transform duration-200 {activeFaq === i ? 'rotate-180' : ''}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
 								</svg>
 							</button>
 							{#if activeFaq === i}
-								<div class="px-6 pb-4 font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle border-t border-gray-100 pt-4">
+								<div class="px-6 pb-4 font-['Poppins'] font-normal text-[18px] md:text-[24px] leading-relaxed text-[#000000] align-middle border-t border-gray-100 pt-4">
 									{$_(faq.answerKey)}
 								</div>
 							{/if}

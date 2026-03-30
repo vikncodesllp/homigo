@@ -35,8 +35,8 @@
 					<span>/</span>
 					<span aria-current="page">{$_('about.hero.title')}</span>
 				</nav>
-				<h1 class="mb-6 font-['Poppins'] font-bold text-[60px] leading-relaxed text-[#000000] tracking-tight align-middle">{$_('about.hero.title')}</h1>
-				<p class="max-w-lg font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle">
+				<h1 class="mb-6 font-['Poppins'] font-bold text-[36px] md:text-[60px] leading-relaxed text-[#000000] tracking-tight align-middle">{$_('about.hero.title')}</h1>
+				<p class="max-w-lg font-['Poppins'] font-normal text-[18px] md:text-[24px] leading-relaxed text-[#000000] align-middle">
 					{$_('about.hero.desc')}
 				</p>
 			</div>
@@ -47,8 +47,8 @@
 	<section class="container mx-auto px-4 py-20">
 		<div class="flex flex-col gap-12 lg:flex-row lg:items-center">
 			<div class="lg:w-1/2">
-				<h2 class="mb-8 font-['PF_Bague_Sans_Pro'] font-black text-[50px] leading-none text-[#0C0C0C] align-middle">{$_('about.hello.title')}</h2>
-				<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle">
+				<h2 class="mb-8 font-['Poppins'] font-black text-[34px] md:text-[50px] leading-none text-[#0C0C0C] align-middle">{$_('about.hello.title')}</h2>
+				<p class="font-['Poppins'] font-normal text-[18px] md:text-[24px] leading-relaxed text-[#000000] align-middle">
 					{$_('about.hello.desc')}
 				</p>
 			</div>
@@ -78,8 +78,8 @@
 				<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full">
 					<img src={missionIcon} alt="Mission Icon" />
 				</div>
-				<h3 class="mb-4 font-['Poppins'] font-bold text-[32px] leading-relaxed text-[#000000] align-middle">{$_('about.mission.title')}</h3>
-				<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle">
+				<h3 class="mb-4 font-['Poppins'] font-bold text-[24px] md:text-[32px] leading-relaxed text-[#000000] align-middle">{$_('about.mission.title')}</h3>
+				<p class="font-['Poppins'] font-normal text-[18px] md:text-[24px] leading-relaxed text-[#000000] align-middle">
 					{$_('about.mission.desc')}
 				</p>
 			</div>
@@ -91,10 +91,11 @@
 				<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full">
 					<img src={visionIcon} alt="Vision Icon" />
 				</div>
-				<h3 class="mb-4 font-['Poppins'] font-bold text-[32px] leading-relaxed text-[#000000] align-middle">{$_('about.vision.title')}</h3>
-				<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#000000] align-middle">
+				<h3 class="mb-4 font-['Poppins'] font-bold text-[24px] md:text-[32px] leading-relaxed text-[#000000] align-middle">{$_('about.vision.title')}</h3>
+				<p class="font-['Poppins'] font-normal text-[18px] md:text-[24px] leading-relaxed text-[#000000] align-middle">
 					{$_('about.vision.desc')}
 				</p>
+			</div>
 		</div>
 	</section>
 
@@ -104,10 +105,10 @@
 			class="container mx-auto flex flex-col items-center justify-between gap-8 px-4 md:flex-row"
 		>
 			<div class="max-w-3xl">
-				<h2 class="mb-4 font-['Poppins'] font-bold text-[40px] leading-relaxed text-[#0C0C0C] align-middle">
+				<h2 class="mb-4 font-['Poppins'] font-bold text-[28px] md:text-[40px] leading-relaxed text-[#0C0C0C] align-middle">
 					{$_('about.cta.title')}
 				</h2>
-				<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#0C0C0C] align-middle">
+				<p class="font-['Poppins'] font-normal text-[18px] md:text-[24px] leading-relaxed text-[#0C0C0C] align-middle">
 					{$_('about.cta.desc')}
 				</p>
 			</div>

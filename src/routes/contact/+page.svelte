@@ -11,7 +11,7 @@
 	description="Get in touch with Homigo for professional cleaning quotes. Call us, WhatsApp us, or visit our Dubai office. 24/7 customer support available."
 />
 
-<div class="font-['SF_Pro'] bg-white">
+<div class="font-sans bg-white">
 	<!-- Hero Section -->
 	<section class="relative h-150 w-full overflow-hidden">
 		<!-- Background Image -->
@@ -38,7 +38,7 @@
 				<span>/</span>
 				<span aria-current="page">{$_('contact.hero.title')}</span>
 			</nav>
-			<h1 class="mb-6 text-6xl font-bold tracking-tight drop-shadow-md">{$_('contact.hero.title')}</h1>
+			<h1 class="mb-6 text-4xl md:text-6xl font-bold tracking-tight drop-shadow-md">{$_('contact.hero.title')}</h1>
 			<p class="max-w-2xl px-4 text-lg font-medium leading-relaxed drop-shadow-sm">
 				{@html $_('contact.hero.desc').replace('\n', '<br />')}
 			</p>
@@ -57,9 +57,9 @@
 						<img src="/assets/Contact Us/call.svg" alt="Phone" class="h-7 w-7" />
 					</div>
 					<div>
-						<h3 class="mb-2 font-['Poppins'] font-semibold text-[26px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.phone_title')}</h3>
-						<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#1A1A1A] align-middle">+971 5030 71989</p>
-						<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#1A1A1A] align-middle mt-2">+971 5030 71986</p>
+						<h3 class="mb-2 font-['Poppins'] font-semibold text-[22px] md:text-[26px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.phone_title')}</h3>
+						<p class="font-['Poppins'] font-normal text-[20px] md:text-[24px] leading-relaxed text-[#1A1A1A] align-middle">+971 5030 71989</p>
+						<p class="font-['Poppins'] font-normal text-[20px] md:text-[24px] leading-relaxed text-[#1A1A1A] align-middle mt-2">+971 5030 71986</p>
 					</div>
 				</div>
 
@@ -69,8 +69,8 @@
 						<img src="/assets/Contact Us/email.svg" alt="Email Icon" class="h-7 w-7" />
 					</div>
 					<div>
-						<h3 class="mb-2 font-['Poppins'] font-semibold text-[26px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.email_title')}</h3>
-						<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#1A1A1A] align-middle break-all">info@homigotechnicalservices.com</p>
+						<h3 class="mb-2 font-['Poppins'] font-semibold text-[22px] md:text-[26px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.email_title')}</h3>
+						<p class="font-['Poppins'] font-normal text-[20px] md:text-[24px] leading-relaxed text-[#1A1A1A] align-middle break-all">info@homigotechnicalservices.com</p>
 					</div>
 				</div>
 
@@ -83,8 +83,8 @@
 						</svg>
 					</div>
 					<div>
-						<h3 class="mb-2 font-['Poppins'] font-semibold text-[26px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.address_title')}</h3>
-						<p class="max-w-xs font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.address_val')}</p>
+						<h3 class="mb-2 font-['Poppins'] font-semibold text-[22px] md:text-[26px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.address_title')}</h3>
+						<p class="max-w-xs font-['Poppins'] font-normal text-[20px] md:text-[24px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.address_val')}</p>
 					</div>
 				</div>
 
@@ -96,8 +96,8 @@
 						</svg>
 					</div>
 					<div>
-						<h3 class="mb-2 font-['Poppins'] font-semibold text-[26px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.hours_title')}</h3>
-						<p class="font-['Poppins'] font-normal text-[24px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.hours_val')}</p>
+						<h3 class="mb-2 font-['Poppins'] font-semibold text-[22px] md:text-[26px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.hours_title')}</h3>
+						<p class="font-['Poppins'] font-normal text-[20px] md:text-[24px] leading-relaxed text-[#1A1A1A] align-middle">{$_('contact.details.hours_val')}</p>
 					</div>
 				</div>
 			</div>

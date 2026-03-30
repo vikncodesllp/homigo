@@ -5,7 +5,7 @@
 	const detailImage = '/assets/Blog/ChatGPT Image Feb 9, dvdvdvd_compressed.jpeg'; // Manhole/Pipe cleaning image
 </script>
 
-<div class="font-['SF_Pro'] bg-gray-50 pb-20 mt-40">
+<div class="font-sans bg-gray-50 pb-20 mt-40">
 	<div class="container mx-auto px-4 max-w-5xl">
 		<!-- Breadcrumb -->
 		<div class="py-4">
