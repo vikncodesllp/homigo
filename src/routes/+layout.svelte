@@ -1,6 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import { goto } from '$app/navigation';
 	import { get } from 'svelte/store';
 	import { locale, isLoading, _ } from 'svelte-i18n';
 	import { onMount } from 'svelte';
@@ -47,6 +48,18 @@
 	function closeMobileMenu() {
 		isMobileMenuOpen = false;
 		document.body.style.overflow = '';
+	}
+
+	const servicePages = import.meta.glob('./services/**/+page.svelte');
+
+	function goToServiceOrQuote(e: MouseEvent, slug: string, serviceId: string) {
+		e.preventDefault();
+		const key = `./services/${slug}/+page.svelte`;
+		if (key in servicePages) {
+			goto(`/services/${slug}`);
+			return;
+		}
+		goto(`/quote?service=${serviceId}`);
 	}
 </script>
 
@@ -255,14 +268,14 @@
 				<div>
 					<h3 class="mb-6 text-lg font-semibold">{$_('footer.services')}</h3>
 					<ul class="space-y-3 text-sm text-gray-300">
-						<li><a href="/services/wastewater-removal" class="hover:text-white transition-colors">{$_('footer.links.wastewater_removal')}</a></li>
-						<li><a href="/services/sewage" class="hover:text-white transition-colors">{$_('footer.links.sewage')}</a></li>
-						<li><a href="/services/grease-trap-cleaning" class="hover:text-white transition-colors">{$_('footer.links.grease_trap_cleaning')}</a></li>
-						<li><a href="/services/drainage-cleaning" class="hover:text-white transition-colors">{$_('footer.links.drainage_cleaning')}</a></li>
-						<li><a href="/services/water-tank-cleaning" class="hover:text-white transition-colors">{$_('footer.links.water_tank_cleaning')}</a></li>
-						<li><a href="/services/technical-maintenance" class="hover:text-white transition-colors">{$_('footer.links.technical_maintenance')}</a></li>
-						<li><a href="/services/painting" class="hover:text-white transition-colors">{$_('footer.links.painting_services')}</a></li>
-						<li><a href="/services/civil-works-maintenance" class="hover:text-white transition-colors">{$_('footer.links.civil_works_maintenance')}</a></li>
+						<li><a href="/services/wastewater-removal" onclick={(e) => goToServiceOrQuote(e, 'wastewater-removal', 'waste_water')} class="hover:text-white transition-colors">{$_('footer.links.wastewater_removal')}</a></li>
+						<li><a href="/services/sewage" onclick={(e) => goToServiceOrQuote(e, 'sewage', 'sewage_tank')} class="hover:text-white transition-colors">{$_('footer.links.sewage')}</a></li>
+						<li><a href="/services/grease-trap-cleaning" onclick={(e) => goToServiceOrQuote(e, 'grease-trap-cleaning', 'grease_trap')} class="hover:text-white transition-colors">{$_('footer.links.grease_trap_cleaning')}</a></li>
+						<li><a href="/services/drainage-cleaning" onclick={(e) => goToServiceOrQuote(e, 'drainage-cleaning', 'drainage')} class="hover:text-white transition-colors">{$_('footer.links.drainage_cleaning')}</a></li>
+						<li><a href="/services/water-tank-cleaning" onclick={(e) => goToServiceOrQuote(e, 'water-tank-cleaning', 'water_tank')} class="hover:text-white transition-colors">{$_('footer.links.water_tank_cleaning')}</a></li>
+						<li><a href="/services/technical-maintenance" onclick={(e) => goToServiceOrQuote(e, 'technical-maintenance', 'technical')} class="hover:text-white transition-colors">{$_('footer.links.technical_maintenance')}</a></li>
+						<li><a href="/services/painting" onclick={(e) => goToServiceOrQuote(e, 'painting', 'painting')} class="hover:text-white transition-colors">{$_('footer.links.painting_services')}</a></li>
+						<li><a href="/services/civil-works-maintenance" onclick={(e) => goToServiceOrQuote(e, 'civil-works-maintenance', 'civil_works')} class="hover:text-white transition-colors">{$_('footer.links.civil_works_maintenance')}</a></li>
 					</ul>
 				</div>
 				<div>
