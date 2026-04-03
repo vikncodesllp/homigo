@@ -31,6 +31,18 @@
 		},
 		"address": "Dubai, United Arab Emirates"
 	},
+	"errors": {
+		"not_found": {
+			"title": "Page Not Found",
+			"desc": "The page you’re looking for doesn’t exist or may have been moved. Please check the URL or use the options below.",
+			"cta_home": "Go to Home",
+			"cta_quote": "Get a Quote"
+		},
+		"generic": {
+			"title": "Something Went Wrong",
+			"desc": "An unexpected error occurred. Please try again or use the options below."
+		}
+	},
 	"home": {
 		"hero": {
 			"title_1": "Trusted Wastewater & Sewage",
